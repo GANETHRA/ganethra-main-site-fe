@@ -120,10 +120,13 @@ export default function Navbar() {
 	return (
 		<header
 			ref={headerRef}
-			className="transition-colors duration-300 sticky top-0 z-50 mt-4"
+			className={cn(
+				"transition-colors duration-300 sticky top-0 z-50 mt-4 lg:mt-8",
+				isMobileMenuOpen && "backdrop-blur-none",
+			)}
 		>
 			<nav
-				className="group w-full border-b border-black/5 dark:border-white/5 lg:border-transparent"
+				className="group w-full"
 				data-state={isMobileMenuOpen ? "active" : "inactive"}
 			>
 				<Container>
@@ -161,7 +164,7 @@ export default function Navbar() {
 						</div>
 						<div
 							aria-hidden="true"
-							className="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 group-data-[state=active]:origin-top group-data-[state=active]:scale-y-100 dark:bg-gray-950/70 lg:hidden"
+							className="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/20 backdrop-blur-2xl transition duration-500 group-data-[state=active]:origin-top group-data-[state=active]:scale-y-100 dark:bg-gray-950/20 lg:hidden"
 						></div>
 						<div className="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl bg-white p-8 opacity-0 transition-all duration-300 dark:bg-gray-800 lg:visible lg:relative lg:flex lg:w-fit lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent group-data-[state=active]:visible group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 lg:group-data-[state=active]:translate-y-0">
 							<div className="w-full lg:w-auto lg:pr-4 lg:pt-0">
@@ -172,7 +175,7 @@ export default function Navbar() {
 											type="button"
 											onClick={() => handleSmoothScroll(link.href)}
 											className={cn(
-												"overflow-hidden block transition-all px-4 py-2 rounded-md text-sm text-left hover:bg-muted",
+												"overflow-hidden block transition-all px-4 py-2 rounded-md text-sm text-left lg:hover:bg-muted",
 												activeSection === link.href &&
 													"bg-primary text-white font-medium md:bg-transparent md:text-primary",
 											)}

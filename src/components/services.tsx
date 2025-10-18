@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { numUtils } from "@/lib/utils";
 import { ShineBorder } from "./ui/shine-border";
-import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
+import { FadeUpMotion, CardStaggerContainer, StaggerItem } from "./motion";
 
 const SERVICES = [
 	{
@@ -134,7 +134,7 @@ export default function Services() {
 					</FadeUpMotion>
 				</div>
 
-				<StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<CardStaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{SERVICES.map((service) => {
 						const IconComponent = service.icon;
 						return (
@@ -187,7 +187,7 @@ export default function Services() {
 							</StaggerItem>
 						);
 					})}
-				</StaggerContainer>
+				</CardStaggerContainer>
 
 				{/* <div className="text-center mt-16">
 					<Button size="lg" className="gap-2">

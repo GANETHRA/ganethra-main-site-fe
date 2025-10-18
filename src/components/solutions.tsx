@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { numUtils } from "@/lib/utils";
 import { ShineBorder } from "./ui/shine-border";
-import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
+import { FadeUpMotion, CardStaggerContainer, StaggerItem } from "./motion";
 
 const SOLUTIONS = [
 	{
@@ -157,7 +157,7 @@ export default function Solutions() {
 					</FadeUpMotion>
 				</div>
 
-				<StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<CardStaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					{SOLUTIONS.map((solution) => {
 						const IconComponent = solution.icon;
 						return (
@@ -267,7 +267,7 @@ export default function Solutions() {
 							</StaggerItem>
 						);
 					})}
-				</StaggerContainer>
+				</CardStaggerContainer>
 			</Container>
 		</section>
 	);
