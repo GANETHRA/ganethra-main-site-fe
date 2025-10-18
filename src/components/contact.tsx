@@ -32,6 +32,8 @@ import { useId, useState } from "react";
 import { Badge } from "./ui/badge";
 import { submitForm } from "@/lib/form";
 import toast from "react-hot-toast";
+import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
+import { ShineBorder } from "./ui/shine-border";
 
 const SERVICES = [
 	"Custom Development",
@@ -90,229 +92,242 @@ export default function Contact() {
 			<Container>
 				{/* Main Heading */}
 				<div className="text-center mb-16 space-y-4">
-					<Badge variant="outline" className="text-sm">
-						<MessageCircle className="mr-1" />
-						Get Started
-					</Badge>
-					<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-						Ready to Transform Your Business?
-					</h2>
-					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-						Schedule a free consultation to discuss your project requirements
-						and get a custom proposal
-					</p>
+					<FadeUpMotion>
+						<Badge variant="outline" className="relative text-sm">
+							<ShineBorder />
+							<MessageCircle className="mr-1" />
+							Get Started
+						</Badge>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.1}>
+						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+							Ready to Transform Your Business?
+						</h2>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.2}>
+						<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+							Schedule a free consultation to discuss your project requirements
+							and get a custom proposal
+						</p>
+					</FadeUpMotion>
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 					{/* Left Column: Project Requirements Form */}
-					<div className="lg:col-span-2">
-						<Card className="shadow-lg">
-							<CardHeader>
-								<CardTitle className="text-2xl font-bold">
-									Project Requirements
-								</CardTitle>
-								<CardDescription>
-									Tell us about your project and we'll get back to you within 24
-									hours
-								</CardDescription>
-							</CardHeader>
-							<CardContent className="space-y-6">
-								<form className="space-y-6" onSubmit={handleSubmit}>
-									{/* Row 1: Name and Email */}
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-										<Input
-											label="Your Name"
-											name="name"
-											placeholder="Enter your full name"
-											required
-										/>
-										<Input
-											label="Email Address"
-											name="email"
-											type="email"
-											placeholder="Enter your email"
-											required
-										/>
-									</div>
+					<FadeUpMotion className="lg:col-span-2">
+						<div>
+							<Card className="shadow-lg">
+								<CardHeader>
+									<CardTitle className="text-2xl font-bold">
+										Project Requirements
+									</CardTitle>
+									<CardDescription>
+										Tell us about your project and we'll get back to you within
+										24 hours
+									</CardDescription>
+								</CardHeader>
+								<CardContent className="space-y-6">
+									<form className="space-y-6" onSubmit={handleSubmit}>
+										{/* Row 1: Name and Email */}
+										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+											<Input
+												label="Your Name"
+												name="name"
+												placeholder="Enter your full name"
+												required
+											/>
+											<Input
+												label="Email Address"
+												name="email"
+												type="email"
+												placeholder="Enter your email"
+												required
+											/>
+										</div>
 
-									{/* Row 2: Company and Service */}
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-										<Input
-											label="Company Name"
-											name="company"
-											placeholder="Enter company name"
-										/>
+										{/* Row 2: Company and Service */}
+										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+											<Input
+												label="Company Name"
+												name="company"
+												placeholder="Enter company name"
+											/>
+											<div className="space-y-2">
+												<Label>
+													Select Service <span className="text-red-500">*</span>
+												</Label>
+												<Select name="service" required>
+													<SelectTrigger className="w-full">
+														<SelectValue placeholder="Choose a service" />
+													</SelectTrigger>
+													<SelectContent>
+														{SERVICES.map((service) => (
+															<SelectItem key={service} value={service}>
+																{service}
+															</SelectItem>
+														))}
+													</SelectContent>
+												</Select>
+											</div>
+										</div>
+
+										{/* Row 3: Budget and Timeline */}
+										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+											<div className="space-y-2">
+												<Label>Budget Range</Label>
+												<Select name="budget">
+													<SelectTrigger className="w-full">
+														<SelectValue placeholder="Select budget range" />
+													</SelectTrigger>
+													<SelectContent>
+														{BUDGET_RANGES.map((range) => (
+															<SelectItem key={range} value={range}>
+																{range}
+															</SelectItem>
+														))}
+													</SelectContent>
+												</Select>
+											</div>
+											<div className="space-y-2">
+												<Label>Timeline</Label>
+												<Select name="timeline">
+													<SelectTrigger className="w-full">
+														<SelectValue placeholder="Select timeline" />
+													</SelectTrigger>
+													<SelectContent>
+														{TIMELINES.map((timeline) => (
+															<SelectItem key={timeline} value={timeline}>
+																{timeline}
+															</SelectItem>
+														))}
+													</SelectContent>
+												</Select>
+											</div>
+										</div>
+
+										{/* Row 4: Project Description */}
 										<div className="space-y-2">
-											<Label>
-												Select Service <span className="text-red-500">*</span>
+											<Label htmlFor={descriptionId}>
+												Project Description{" "}
+												<span className="text-red-500">*</span>
 											</Label>
-											<Select name="service" required>
-												<SelectTrigger className="w-full">
-													<SelectValue placeholder="Choose a service" />
-												</SelectTrigger>
-												<SelectContent>
-													{SERVICES.map((service) => (
-														<SelectItem key={service} value={service}>
-															{service}
-														</SelectItem>
-													))}
-												</SelectContent>
-											</Select>
+											<Textarea
+												id={descriptionId}
+												name="description"
+												placeholder="Describe your project requirements, goals, and any specific features you need..."
+												className="min-h-[120px]"
+												required
+											/>
 										</div>
-									</div>
 
-									{/* Row 3: Budget and Timeline */}
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-										<div className="space-y-2">
-											<Label>Budget Range</Label>
-											<Select name="budget">
-												<SelectTrigger className="w-full">
-													<SelectValue placeholder="Select budget range" />
-												</SelectTrigger>
-												<SelectContent>
-													{BUDGET_RANGES.map((range) => (
-														<SelectItem key={range} value={range}>
-															{range}
-														</SelectItem>
-													))}
-												</SelectContent>
-											</Select>
-										</div>
-										<div className="space-y-2">
-											<Label>Timeline</Label>
-											<Select name="timeline">
-												<SelectTrigger className="w-full">
-													<SelectValue placeholder="Select timeline" />
-												</SelectTrigger>
-												<SelectContent>
-													{TIMELINES.map((timeline) => (
-														<SelectItem key={timeline} value={timeline}>
-															{timeline}
-														</SelectItem>
-													))}
-												</SelectContent>
-											</Select>
-										</div>
-									</div>
-
-									{/* Row 4: Project Description */}
-									<div className="space-y-2">
-										<Label htmlFor={descriptionId}>
-											Project Description{" "}
-											<span className="text-red-500">*</span>
-										</Label>
-										<Textarea
-											id={descriptionId}
-											name="description"
-											placeholder="Describe your project requirements, goals, and any specific features you need..."
-											className="min-h-[120px]"
-											required
-										/>
-									</div>
-
-									{/* Submit Button */}
-									<Button
-										type="submit"
-										className="w-full"
-										size="lg"
-										disabled={isSubmitting}
-									>
-										{isSubmitting ? "Submitting..." : "Send Project Request"}
-										<ArrowRightIcon className="w-4 h-4 ml-2" />
-									</Button>
-								</form>
-							</CardContent>
-						</Card>
-					</div>
+										{/* Submit Button */}
+										<Button
+											type="submit"
+											className="w-full"
+											size="lg"
+											disabled={isSubmitting}
+										>
+											{isSubmitting ? "Submitting..." : "Send Project Request"}
+											<ArrowRightIcon className="w-4 h-4 ml-2" />
+										</Button>
+									</form>
+								</CardContent>
+							</Card>
+						</div>
+					</FadeUpMotion>
 
 					{/* Right Column: Contact Info, Quick Actions, Response Time */}
-					<div className="space-y-6">
-						{/* Contact Information Card */}
-						<Card className="shadow-lg gap-3">
-							<CardHeader>
-								<CardTitle className="text-lg font-bold">
-									Contact Information
-								</CardTitle>
-							</CardHeader>
-							<CardContent className="space-y-4">
-								<div className="flex items-center gap-3">
-									<MailIcon className="w-5 h-5 text-primary" />
-									<a
-										className="text-sm hover:underline"
-										href="mailto:contact@ganethra.com"
-									>
-										contact@ganethra.com
-									</a>
-								</div>
-								<div className="flex items-center gap-3">
-									<PhoneIcon className="w-5 h-5 text-primary" />
-									<a
-										className="text-sm hover:underline"
-										href="tel:+918041521234"
-									>
-										+91 80 4152 1234
-									</a>
-								</div>
-								<div className="flex items-center gap-3">
-									<MapPinIcon className="w-5 h-5 text-primary" />
-									<a
-										href="https://maps.google.com/?q=Koramangala,Bangalore,India"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-sm hover:underline"
-									>
-										Koramangala, Bangalore, India
-									</a>
-								</div>
-								<div className="flex items-center gap-3">
-									<ClockIcon className="w-5 h-5 text-primary" />
-									<span className="text-sm">Mon-Fri: 9 AM - 6 PM IST</span>
-								</div>
-							</CardContent>
-						</Card>
-
-						{/* Quick Actions Card */}
-						<Card className="shadow-lg gap-3">
-							<CardHeader>
-								<CardTitle className="text-lg font-bold">
-									Quick Actions
-								</CardTitle>
-							</CardHeader>
-							<CardContent className="space-y-3">
-								<Button variant="outline" className="w-full justify-start">
-									<DownloadIcon className="w-4 h-4 mr-2" />
-									Download Company Profile
-								</Button>
-								<Button variant="outline" className="w-full justify-start">
-									<CalendarIcon className="w-4 h-4 mr-2" />
-									Schedule Video Call
-								</Button>
-								<Button className="w-full justify-start">
-									<ArrowRightIcon className="w-4 h-4 mr-2" />
-									Access Product Demos
-								</Button>
-							</CardContent>
-						</Card>
-
-						{/* Response Time Card */}
-						<Card className="shadow-lg p-2">
-							<CardContent className="p-2 space-y-2">
-								<div className="flex gap-2 items-center">
-									<h4 className="font-semibold text-lg">
-										Average Response Time
-									</h4>
-									<Badge className="rounded-full text-green-800 bg-green-100 text-sm">
-										<div className="size-2 rounded-full bg-green-500 mr-1" />
-										24 Hours
-									</Badge>
-								</div>
-								<p className="text-sm text-muted-foreground">
-									We respond to all inquiries within 24 hours during business
-									days
-								</p>
-							</CardContent>
-						</Card>
-					</div>
+					<StaggerContainer className="space-y-6">
+						<StaggerItem>
+							{/* Contact Information Card */}
+							<Card className="shadow-lg gap-3">
+								<CardHeader>
+									<CardTitle className="text-lg font-bold">
+										Contact Information
+									</CardTitle>
+								</CardHeader>
+								<CardContent className="space-y-4">
+									<div className="flex items-center gap-3">
+										<MailIcon className="w-5 h-5 text-primary" />
+										<a
+											className="text-sm hover:underline"
+											href="mailto:contact@ganethra.com"
+										>
+											contact@ganethra.com
+										</a>
+									</div>
+									<div className="flex items-center gap-3">
+										<PhoneIcon className="w-5 h-5 text-primary" />
+										<a
+											className="text-sm hover:underline"
+											href="tel:+918041521234"
+										>
+											+91 80 4152 1234
+										</a>
+									</div>
+									<div className="flex items-center gap-3">
+										<MapPinIcon className="w-5 h-5 text-primary" />
+										<a
+											href="https://maps.google.com/?q=Koramangala,Bangalore,India"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-sm hover:underline"
+										>
+											Koramangala, Bangalore, India
+										</a>
+									</div>
+									<div className="flex items-center gap-3">
+										<ClockIcon className="w-5 h-5 text-primary" />
+										<span className="text-sm">Mon-Fri: 9 AM - 6 PM IST</span>
+									</div>
+								</CardContent>
+							</Card>
+						</StaggerItem>
+						<StaggerItem>
+							{/* Quick Actions Card */}
+							<Card className="shadow-lg gap-3">
+								<CardHeader>
+									<CardTitle className="text-lg font-bold">
+										Quick Actions
+									</CardTitle>
+								</CardHeader>
+								<CardContent className="space-y-3">
+									<Button variant="outline" className="w-full justify-start">
+										<DownloadIcon className="w-4 h-4 mr-2" />
+										Download Company Profile
+									</Button>
+									<Button variant="outline" className="w-full justify-start">
+										<CalendarIcon className="w-4 h-4 mr-2" />
+										Schedule Video Call
+									</Button>
+									<Button className="w-full justify-start">
+										<ArrowRightIcon className="w-4 h-4 mr-2" />
+										Access Product Demos
+									</Button>
+								</CardContent>
+							</Card>
+						</StaggerItem>
+						<StaggerItem>
+							{/* Response Time Card */}
+							<Card className="shadow-lg p-2">
+								<CardContent className="p-2 space-y-2">
+									<div className="flex gap-2 items-center">
+										<h4 className="font-semibold text-lg">
+											Average Response Time
+										</h4>
+										<Badge className="rounded-full text-green-800 bg-green-100 text-sm">
+											<div className="size-2 rounded-full bg-green-500 mr-1" />
+											24 Hours
+										</Badge>
+									</div>
+									<p className="text-sm text-muted-foreground">
+										We respond to all inquiries within 24 hours during business
+										days
+									</p>
+								</CardContent>
+							</Card>
+						</StaggerItem>
+					</StaggerContainer>
 				</div>
 			</Container>
 		</section>

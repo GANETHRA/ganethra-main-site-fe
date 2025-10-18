@@ -22,6 +22,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { numUtils } from "@/lib/utils";
+import { ShineBorder } from "./ui/shine-border";
+import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
 
 const SERVICES = [
 	{
@@ -112,73 +114,80 @@ export default function Services() {
 		<section className="py-20">
 			<Container>
 				<div className="text-center mb-16 space-y-4">
-					<Badge variant="outline" className="text-sm">
-						<BoxIcon className="mr-1" />
-						Our Services
-					</Badge>
-					<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-						Enterprise-Grade IT Solutions
-					</h2>
-					<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-						Comprehensive IT solutions designed to accelerate your business
-						growth and digital transformation journey.
-					</p>
+					<FadeUpMotion>
+						<Badge variant="outline" className="relative text-sm">
+							<ShineBorder />
+							<BoxIcon className="mr-1" />
+							Our Services
+						</Badge>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.1}>
+						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+							Enterprise-Grade IT Solutions
+						</h2>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.2}>
+						<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+							Comprehensive IT solutions designed to accelerate your business
+							growth and digital transformation journey.
+						</p>
+					</FadeUpMotion>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{SERVICES.map((service) => {
 						const IconComponent = service.icon;
 						return (
-							<Card
-								key={service.title}
-								className="group hover:shadow-lg transition-all duration-300 shadow-sm"
-							>
-								<CardHeader>
-									<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-										<IconComponent className="w-6 h-6 text-primary" />
-									</div>
-									<CardTitle className="text-xl font-semibold">
-										{service.title}
-									</CardTitle>
-									<p className="text-sm font-medium mb-2">
-										Starting at{" "}
-										{numUtils.formatToINR(service.priceINR, { precision: 0 })}
-									</p>
-									<CardDescription className="text-muted-foreground leading-relaxed">
-										{service.description}
-									</CardDescription>
-								</CardHeader>
-								<CardContent>
-									<ul className="space-y-2">
-										{service.features.map((feature) => (
-											<li
-												key={feature}
-												className="flex items-center gap-3 text-sm"
-											>
-												<div className="p-1 bg-emerald-100 rounded-full">
-													<CheckIcon
-														className="flex-shrink-0 text-emerald-800"
-														size={12}
-													/>
-												</div>
-												{feature}
-											</li>
-										))}
-									</ul>
-								</CardContent>
-								<CardFooter>
-									<Button
-										variant="outline"
-										className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
-									>
-										Get Quote
-										<ChevronRight />
-									</Button>
-								</CardFooter>
-							</Card>
+							<StaggerItem key={service.title}>
+								<Card className="group hover:shadow-lg transition-all duration-300 shadow-sm">
+									<CardHeader>
+										<div className="relative w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:shadow transition-shadow">
+											<ShineBorder shineColor="var(--primary)" />
+											<IconComponent className="w-6 h-6 text-primary" />
+										</div>
+										<CardTitle className="text-xl font-semibold">
+											{service.title}
+										</CardTitle>
+										<p className="text-sm font-medium mb-2">
+											Starting at{" "}
+											{numUtils.formatToINR(service.priceINR, { precision: 0 })}
+										</p>
+										<CardDescription className="text-muted-foreground leading-relaxed">
+											{service.description}
+										</CardDescription>
+									</CardHeader>
+									<CardContent>
+										<ul className="space-y-2">
+											{service.features.map((feature) => (
+												<li
+													key={feature}
+													className="flex items-center gap-3 text-sm"
+												>
+													<div className="p-1 bg-emerald-100 rounded-full">
+														<CheckIcon
+															className="flex-shrink-0 text-emerald-800"
+															size={12}
+														/>
+													</div>
+													{feature}
+												</li>
+											))}
+										</ul>
+									</CardContent>
+									<CardFooter>
+										<Button
+											variant="outline"
+											className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
+										>
+											Get Quote
+											<ChevronRight />
+										</Button>
+									</CardFooter>
+								</Card>
+							</StaggerItem>
 						);
 					})}
-				</div>
+				</StaggerContainer>
 
 				{/* <div className="text-center mt-16">
 					<Button size="lg" className="gap-2">

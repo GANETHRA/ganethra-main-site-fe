@@ -21,6 +21,8 @@ import {
 	ChartNoAxesCombinedIcon,
 } from "lucide-react";
 import { numUtils } from "@/lib/utils";
+import { ShineBorder } from "./ui/shine-border";
+import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
 
 const SOLUTIONS = [
 	{
@@ -135,128 +137,137 @@ export default function Solutions() {
 		<section className="py-20 bg-gray-50 dark:bg-gray-900/50">
 			<Container>
 				<div className="text-center mb-16 space-y-4">
-					<Badge variant="outline" className="px-3 py-1">
-						<Layers className="w-4 h-4 mr-1" />
-						SaaS Products
-					</Badge>
-					<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-						Ready-to-Deploy Solutions
-					</h2>
-					<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-						Production-ready SaaS applications trusted by thousands of
-						businesses worldwide
-					</p>
+					<FadeUpMotion>
+						<Badge variant="outline" className="relative px-3 py-1">
+							<ShineBorder />
+							<Layers className="w-4 h-4 mr-1" />
+							SaaS Products
+						</Badge>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.1}>
+						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+							Ready-to-Deploy Solutions
+						</h2>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.2}>
+						<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+							Production-ready SaaS applications trusted by thousands of
+							businesses worldwide
+						</p>
+					</FadeUpMotion>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					{SOLUTIONS.map((solution) => {
 						const IconComponent = solution.icon;
 						return (
-							<Card
-								key={solution.title}
-								className="group hover:shadow-xl transition-all duration-300 shadow-lg"
-							>
-								<CardHeader>
-									<div className="flex items-start justify-between">
-										<div className="flex gap-4 items-center">
-											<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-												<IconComponent className="w-6 h-6 text-primary" />
+							<StaggerItem key={solution.title}>
+								<Card className="group hover:shadow-xl transition-all duration-300 shadow-lg">
+									<CardHeader>
+										<div className="flex items-start justify-between">
+											<div className="flex gap-4 items-center">
+												<div className="w-12 h-12 relative transition-shadow rounded-lg flex items-center justify-center group-hover:shadow-sm">
+													<ShineBorder shineColor="var(--primary)" />
+													<IconComponent className="w-6 h-6 text-primary" />
+												</div>
+												<div>
+													<CardTitle className="text-xl font-semibold">
+														{solution.title}
+													</CardTitle>
+													<div className="flex gap-2">
+														{solution.categories.map((category) => (
+															<Badge
+																variant="secondary"
+																className="mb-2"
+																key={category}
+															>
+																{category}
+															</Badge>
+														))}
+													</div>
+												</div>
+											</div>
+											<div className="text-right -space-y-1">
+												<p className="text-lg font-semibold text-primary">
+													{numUtils.formatToINR(solution.subscriptionPriceINR, {
+														precision: 0,
+													})}
+												</p>
+												<span className="text-xs text-muted-foreground">
+													per month
+												</span>
+											</div>
+										</div>
+
+										<CardDescription className="text-muted-foreground mt-4">
+											{solution.description}
+										</CardDescription>
+									</CardHeader>
+
+									<CardContent className="space-y-6">
+										{/* Key Metrics */}
+										<div className="grid grid-cols-3 gap-4 text-center border-y py-4">
+											<div>
+												<div className="text-sm font-semibold text-primary">
+													{solution.metrics.users}
+												</div>
+												<div className="text-xs text-muted-foreground">
+													Active Users
+												</div>
 											</div>
 											<div>
-												<CardTitle className="text-xl font-semibold">
-													{solution.title}
-												</CardTitle>
-												<div className="flex gap-2">
-													{solution.categories.map((category) => (
-														<Badge
-															variant="secondary"
-															className="mb-2"
-															key={category}
-														>
-															{category}
-														</Badge>
-													))}
+												<div className="text-sm font-semibold text-green-600">
+													{solution.metrics.uptime}
+												</div>
+												<div className="text-xs text-muted-foreground">
+													Reliability
+												</div>
+											</div>
+											<div>
+												<div className="text-sm font-semibold text-blue-600">
+													{solution.metrics.integrations}
+												</div>
+												<div className="text-xs text-muted-foreground">
+													Integrations
 												</div>
 											</div>
 										</div>
-										<div className="text-right -space-y-1">
-											<p className="text-lg font-semibold text-primary">
-												{numUtils.formatToINR(solution.subscriptionPriceINR, {
-													precision: 0,
-												})}
-											</p>
-											<span className="text-xs text-muted-foreground">
-												per month
-											</span>
-										</div>
-									</div>
 
-									<CardDescription className="text-muted-foreground mt-4">
-										{solution.description}
-									</CardDescription>
-								</CardHeader>
-
-								<CardContent className="space-y-6">
-									{/* Key Metrics */}
-									<div className="grid grid-cols-3 gap-4 text-center border-y py-4">
+										{/* Features */}
 										<div>
-											<div className="text-sm font-semibold text-primary">
-												{solution.metrics.users}
-											</div>
-											<div className="text-xs text-muted-foreground">
-												Active Users
-											</div>
-										</div>
-										<div>
-											<div className="text-sm font-semibold text-green-600">
-												{solution.metrics.uptime}
-											</div>
-											<div className="text-xs text-muted-foreground">
-												Reliability
-											</div>
-										</div>
-										<div>
-											<div className="text-sm font-semibold text-blue-600">
-												{solution.metrics.integrations}
-											</div>
-											<div className="text-xs text-muted-foreground">
-												Integrations
-											</div>
-										</div>
-									</div>
+											<h4 className="text-sm font-semibold mb-3">
+												Key Features
+											</h4>
+											<div className="grid grid-cols-2 gap-2">
+												{solution.features.map((feature) => (
+													<li
+														key={feature}
+														className="flex items-center gap-3 text-sm"
+													>
+														<div className="p-1 bg-emerald-100 rounded-full">
+															<CheckIcon
+																className="flex-shrink-0 text-emerald-800"
+																size={12}
+															/>
+														</div>
 
-									{/* Features */}
-									<div>
-										<h4 className="text-sm font-semibold mb-3">Key Features</h4>
-										<div className="grid grid-cols-2 gap-2">
-											{solution.features.map((feature) => (
-												<li
-													key={feature}
-													className="flex items-center gap-3 text-sm"
-												>
-													<div className="p-1 bg-emerald-100 rounded-full">
-														<CheckIcon
-															className="flex-shrink-0 text-emerald-800"
-															size={12}
-														/>
-													</div>
-
-													{feature}
-												</li>
-											))}
+														{feature}
+													</li>
+												))}
+											</div>
 										</div>
-									</div>
-								</CardContent>
-								<CardFooter className="flex-1 items-end">
-									<Button className="w-full group-hover:bg-primary/90 transition-colors">
-										Start Free Trial
-										<PlayIcon className="w-4 h-4 ml-2" />
-									</Button>
-								</CardFooter>
-							</Card>
+									</CardContent>
+									<CardFooter className="flex-1 items-end">
+										<Button className="w-full group-hover:bg-primary/90 transition-colors">
+											Start Free Trial
+											<PlayIcon className="w-4 h-4 ml-2" />
+										</Button>
+									</CardFooter>
+								</Card>
+							</StaggerItem>
 						);
 					})}
-				</div>
+				</StaggerContainer>
 			</Container>
 		</section>
 	);

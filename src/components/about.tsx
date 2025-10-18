@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Avatar, AvatarFallback } from "./ui/avatar";
+import { TechnologyItem } from "./ui/technology-item";
+import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
+import { ShineBorder } from "./ui/shine-border";
 
 const STATISTICS = [
 	{ value: "500+", label: "Projects Delivered", icon: CheckCircleIcon },
@@ -25,14 +28,67 @@ const STATISTICS = [
 ];
 
 const TECHNOLOGIES = [
-	{ name: "React", percentage: 95 },
-	{ name: "Node.js", percentage: 90 },
-	{ name: "Python", percentage: 88 },
-	{ name: "AWS", percentage: 92 },
-	{ name: ".NET Core", percentage: 85 },
-	{ name: "Docker", percentage: 90 },
-	{ name: "Kubernetes", percentage: 87 },
-	{ name: "MongoDB", percentage: 89 },
+	{
+		name: "React",
+		service: "Frontend Development",
+		iconUrl: "https://api.iconify.design/logos:react.svg",
+	},
+	{
+		name: "Node.js",
+		service: "Backend Development",
+		iconUrl: "https://api.iconify.design/logos:nodejs-icon.svg",
+	},
+	{
+		name: "Python",
+		service: "Data Science & AI",
+		iconUrl: "https://api.iconify.design/logos:python.svg",
+	},
+	{
+		name: "TypeScript",
+		service: "Type-Safe Development",
+		iconUrl: "https://api.iconify.design/logos:typescript-icon.svg",
+	},
+	{
+		name: "AWS",
+		service: "Cloud Infrastructure",
+		iconUrl: "https://api.iconify.design/logos:aws.svg",
+	},
+	{
+		name: ".NET Core",
+		service: "Enterprise Applications",
+		iconUrl: "https://api.iconify.design/logos:dotnet.svg",
+	},
+	{
+		name: "Docker",
+		service: "Containerization",
+		iconUrl: "https://api.iconify.design/logos:docker-icon.svg",
+	},
+	{
+		name: "Kubernetes",
+		service: "Orchestration",
+		iconUrl: "https://api.iconify.design/logos:kubernetes.svg",
+	},
+
+	{
+		name: "MongoDB",
+		service: "Database Management",
+		iconUrl: "https://api.iconify.design/logos:mongodb-icon.svg",
+	},
+	{
+		name: "PostgreSQL",
+		service: "Relational Database",
+		iconUrl: "https://api.iconify.design/logos:postgresql.svg",
+	},
+	{
+		name: "SQL Server",
+		service: "Database Management",
+		iconUrl: "https://api.iconify.design/devicon:microsoftsqlserver.svg",
+	},
+	{
+		name: "Redis",
+		service: "Caching & Sessions",
+		iconUrl: "https://api.iconify.design/logos:redis.svg",
+	},
 ];
 
 export default function About() {
@@ -40,109 +96,114 @@ export default function About() {
 		<section className="py-20">
 			<Container>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-					{/* Left Column: About GANETHRA */}
-					<div className="space-y-8">
+					<div className="space-y-8 mt-12">
 						<div className="space-y-4">
-							<Badge variant="outline" className="px-3 py-1">
-								<BuildingIcon className="w-4 h-4 mr-1" />
-								About GANETHRA
-							</Badge>
-							<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-								8+ Years of Excellence in IT Innovation
-							</h2>
-							<p className="text-lg text-muted-foreground leading-relaxed">
-								Founded in 2016, GANETHRA IT Services has evolved from a
-								boutique consultancy to a full-scale technology partner, serving
-								150+ clients across retail, healthcare, finance, and
-								manufacturing sectors.
-							</p>
+							<FadeUpMotion>
+								<Badge variant="outline" className="relative px-3 py-1">
+									<ShineBorder />
+									<BuildingIcon className="w-4 h-4 mr-1" />
+									About GANETHRA
+								</Badge>
+							</FadeUpMotion>
+							<FadeUpMotion delay={0.1}>
+								<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+									8+ Years of Excellence in IT Innovation
+								</h2>
+							</FadeUpMotion>
+							<FadeUpMotion delay={0.2}>
+								<p className="text-lg text-muted-foreground leading-relaxed">
+									Founded in 2016, GANETHRA IT Services has evolved from a
+									boutique consultancy to a full-scale technology partner,
+									serving 150+ clients across retail, healthcare, finance, and
+									manufacturing sectors.
+								</p>
+							</FadeUpMotion>
 						</div>
 
-						{/* Statistics Grid */}
-						<div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+						<StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4">
 							{STATISTICS.map((stat) => {
 								const IconComponent = stat.icon;
 								return (
-									<Card
-										key={stat.label}
-										className="text-center p-4 hover:shadow-md transition-shadow"
-									>
-										<CardContent className="p-0">
-											<div className="w-8 h-8  rounded-full flex items-center justify-center mx-auto mb-2">
-												<IconComponent className="size-6 text-muted-foreground" />
-											</div>
-											<div className="text-2xl font-bold text-primary mb-1">
-												{stat.value}
-											</div>
-											<div className="text-sm text-muted-foreground">
-												{stat.label}
-											</div>
-										</CardContent>
-									</Card>
+									<StaggerItem key={stat.label}>
+										<Card className="text-center p-4 hover:shadow-md transition-shadow">
+											<CardContent className="p-0">
+												<div className="w-8 h-8  rounded-full flex items-center justify-center mx-auto mb-2">
+													<IconComponent className="size-6 text-muted-foreground" />
+												</div>
+												<div className="text-2xl font-bold text-primary mb-1">
+													{stat.value}
+												</div>
+												<div className="text-sm text-muted-foreground">
+													{stat.label}
+												</div>
+											</CardContent>
+										</Card>
+									</StaggerItem>
 								);
 							})}
-						</div>
+						</StaggerContainer>
 
-						<div className="flex items-center gap-2">
-							<div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
-								{[1, 2, 3].map((i) => (
-									<Avatar key={i} className="size-10">
-										<AvatarFallback>
-											<UserIcon className="size-6 text-muted-foreground" />
-										</AvatarFallback>
-									</Avatar>
-								))}
-							</div>
-							<div>
-								<h3 className="textsm font-medium">
-									Trusted by 150+ companies
-								</h3>
-								<div className="flex items-center gap-1 text-muted-foreground text-sm">
-									<StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
-									<span>4.9/5 client satisfaction</span>
+						<FadeUpMotion delay={0.3}>
+							<div className="flex items-center gap-2">
+								<div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
+									{[1, 2, 3].map((i) => (
+										<Avatar key={i} className="size-10">
+											<AvatarFallback>
+												<UserIcon className="size-6 text-muted-foreground" />
+											</AvatarFallback>
+										</Avatar>
+									))}
+								</div>
+								<div>
+									<h3 className="textsm font-medium">
+										Trusted by 150+ companies
+									</h3>
+									<div className="flex items-center gap-1 text-muted-foreground text-sm">
+										<StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
+										<span>4.9/5 client satisfaction</span>
+									</div>
 								</div>
 							</div>
-						</div>
+						</FadeUpMotion>
 					</div>
 
 					<div className="space-y-8">
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6">
-								Technology Expertise
-							</h3>
+							<FadeUpMotion>
+								<h3 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6">
+									Technology Expertise
+								</h3>
+							</FadeUpMotion>
 
-							<div className="space-y-4">
+							<StaggerContainer
+								className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"
+								staggerDelay={0.05}
+							>
 								{TECHNOLOGIES.map((tech) => (
-									<div key={tech.name} className="space-y-2">
-										<div className="flex justify-between items-center">
-											<span className="text-sm font-medium">{tech.name}</span>
-											<span className="text-sm text-muted-foreground">
-												{tech.percentage}%
-											</span>
-										</div>
-										<div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-											<div
-												className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
-												style={{ width: `${tech.percentage}%` }}
-											></div>
-										</div>
-									</div>
+									<StaggerItem key={tech.name}>
+										<TechnologyItem
+											name={tech.name}
+											service={tech.service}
+											iconUrl={tech.iconUrl}
+										/>
+									</StaggerItem>
 								))}
-							</div>
+							</StaggerContainer>
 						</div>
 
-						{/* Technology Image */}
-						<div className="relative">
-							<div className="aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
-								<Image
-									src="/assets/hero3.svg"
-									alt="Technology expertise - hands typing on laptop with code in background"
-									width={500}
-									height={375}
-									className="w-full h-full object-cover"
-								/>
+						<FadeUpMotion delay={0.2}>
+							<div className="relative">
+								<div className="aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+									<Image
+										src="/assets/hero3.svg"
+										alt="Technology expertise - hands typing on laptop with code in background"
+										width={500}
+										height={375}
+										className="w-full h-full object-cover"
+									/>
+								</div>
 							</div>
-						</div>
+						</FadeUpMotion>
 					</div>
 				</div>
 			</Container>

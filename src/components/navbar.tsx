@@ -128,7 +128,7 @@ export default function Navbar() {
 			>
 				<Container>
 					<div className="relative flex flex-wrap items-center justify-between gap-6 py-2 md:gap-0">
-						<div className="relative z-20 flex w-full justify-between md:px-0 lg:w-fit">
+						<div className="relative z-20 flex w-full justify-between items-center md:px-0 lg:w-fit">
 							<a href="/" aria-label="logo" className="flex items-center gap-2">
 								{/* <Logo className="rounded-md w-8 fill-[var(--logo-bg)]" /> */}
 								<div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
@@ -172,13 +172,21 @@ export default function Navbar() {
 											type="button"
 											onClick={() => handleSmoothScroll(link.href)}
 											className={cn(
-												"block transition-colors duration-300 md:px-4 rounded-md py-2 text-sm font-medium text-left",
-												activeSection === link.href
-													? "text-white bg-primary "
-													: "hover:text-foreground",
+												"overflow-hidden block transition-all px-4 py-2 rounded-md text-sm text-left hover:bg-muted",
+												activeSection === link.href &&
+													"bg-primary text-white font-medium md:bg-transparent md:text-primary",
 											)}
 										>
 											<span>{link.name}</span>
+											<div
+												className={cn(
+													"w-full h-px bg-primary",
+													"transition-transform duration-300",
+													activeSection === link.href
+														? "scale-x-100"
+														: "scale-x-0",
+												)}
+											/>
 										</button>
 									))}
 								</div>
