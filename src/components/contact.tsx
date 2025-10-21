@@ -27,6 +27,7 @@ import {
 	CalendarIcon,
 	ArrowRightIcon,
 	MessageCircle,
+	Loader2Icon,
 } from "lucide-react";
 import { useId, useState } from "react";
 import { Badge } from "./ui/badge";
@@ -62,7 +63,7 @@ export default function Contact() {
 			const formData = new FormData(e.currentTarget);
 			const data = Object.fromEntries(formData.entries());
 
-			await submitForm("contact", data);
+			await submitForm("generic", data);
 
 			toast.success(
 				"Thank you! Your project request has been submitted successfully. We'll get back to you within 24 hours.",
@@ -72,7 +73,7 @@ export default function Contact() {
 				},
 			);
 
-			e.currentTarget.reset();
+			e.currentTarget?.reset();
 		} catch (error) {
 			console.error("Form submission error:", error);
 			toast.error(
@@ -227,8 +228,9 @@ export default function Contact() {
 											size="lg"
 											disabled={isSubmitting}
 										>
-											{isSubmitting ? "Submitting..." : "Send Project Request"}
-											<ArrowRightIcon className="w-4 h-4 ml-2" />
+											{isSubmitting && <Loader2Icon className="animate-spin" />}
+											Send Project Request
+											<ArrowRightIcon className="w-4 h-4" />
 										</Button>
 									</form>
 								</CardContent>
