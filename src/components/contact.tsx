@@ -47,7 +47,7 @@ const SERVICES = [
 	"IT Consulting",
 ];
 
-const BUDGET_RANGES = ["₹50 - ₹1L", "₹1L - ₹5L", "₹5L - ₹10L", "₹10L+"];
+const BUDGET_RANGES = ["₹50K - ₹1L", "₹1L - ₹5L", "₹5L - ₹10L", "₹10L+"];
 
 const TIMELINES = ["ASAP", "1-3 months", "3-6 months", "6+ months", "Flexible"];
 

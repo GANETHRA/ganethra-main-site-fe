@@ -6,7 +6,6 @@ import About from "@/components/about";
 import CaseStudies from "@/components/case-studies";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import { Chatbot } from "@/components/chatbot/chatbot";
 import { Bubble } from "@typebot.io/nextjs";
 
 export default function Home() {
@@ -39,9 +38,6 @@ export default function Home() {
 				apiHost={process.env.NEXT_PUBLIC_TYPEBOT_HOST}
 				theme={{
 					button: { backgroundColor: "var(--primary)" },
-					chatWindow: {
-						backgroundColor: "var(--background)",
-					},
 				}}
 			/>
 		</>
