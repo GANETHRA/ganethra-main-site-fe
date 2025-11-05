@@ -1,0 +1,75 @@
+{
+	"name": "Ganethra IT Services - Custom Software Development & SaaS Solutions",
+	"short_name": "Ganethra IT",
+	"description": "Leading IT services company in Hyderabad offering custom software development, cloud migration, SaaS solutions, and digital transformation.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#000000",
+	"orientation": "portrait-primary",
+	"scope": "/",
+	"lang": "en",
+	"dir": "ltr",
+	"categories": ["business", "productivity", "technology"],
+	"icons": [
+		{
+			"src": "/favicon.ico",
+			"sizes": "16x16 32x32 48x48",
+			"type": "image/x-icon",
+			"purpose": "any"
+		},
+		{
+			"src": "/assets/hero2.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "/assets/hero2.svg",
+			"sizes": "1200x630",
+			"type": "image/svg+xml",
+			"form_factor": "wide",
+			"label": "Ganethra IT Services homepage showing modern office workspace"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "Our Services",
+			"short_name": "Services",
+			"description": "View our IT services and solutions",
+			"url": "/#services",
+			"icons": [
+				{
+					"src": "/assets/hero2.svg",
+					"sizes": "96x96"
+				}
+			]
+		},
+		{
+			"name": "SaaS Products",
+			"short_name": "Products",
+			"description": "Explore our SaaS solutions",
+			"url": "/#solutions",
+			"icons": [
+				{
+					"src": "/assets/hero2.svg",
+					"sizes": "96x96"
+				}
+			]
+		},
+		{
+			"name": "Contact Us",
+			"short_name": "Contact",
+			"description": "Get in touch with our team",
+			"url": "/#contact",
+			"icons": [
+				{
+					"src": "/assets/hero2.svg",
+					"sizes": "96x96"
+				}
+			]
+		}
+	]
+}

@@ -96,12 +96,12 @@ export default function About() {
 		<section className="py-20">
 			<Container>
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-					<div className="space-y-8 mt-12">
-						<div className="space-y-4">
+					<article className="space-y-8 mt-12">
+						<header className="space-y-4">
 							<FadeUpMotion>
 								<Badge variant="outline" className="relative px-3 py-1">
 									<ShineBorder />
-									<BuildingIcon className="w-4 h-4 mr-1" />
+									<BuildingIcon className="w-4 h-4 mr-1" aria-hidden="true" />
 									About GANETHRA
 								</Badge>
 							</FadeUpMotion>
@@ -115,33 +115,39 @@ export default function About() {
 									Founded in 2016, GANETHRA IT Services has evolved from a
 									boutique consultancy to a full-scale technology partner,
 									serving 150+ clients across retail, healthcare, finance, and
-									manufacturing sectors.
+									manufacturing sectors. Based in Hyderabad, India, we deliver
+									enterprise-grade IT solutions globally.
 								</p>
 							</FadeUpMotion>
-						</div>
+						</header>
 
-						<StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4">
-							{STATISTICS.map((stat) => {
-								const IconComponent = stat.icon;
-								return (
-									<StaggerItem key={stat.label}>
-										<Card className="text-center p-4 hover:shadow-md transition-shadow">
-											<CardContent className="p-0">
-												<div className="w-8 h-8  rounded-full flex items-center justify-center mx-auto mb-2">
-													<IconComponent className="size-6 text-muted-foreground" />
-												</div>
-												<div className="text-2xl font-bold text-primary mb-1">
-													{stat.value}
-												</div>
-												<div className="text-sm text-muted-foreground">
-													{stat.label}
-												</div>
-											</CardContent>
-										</Card>
-									</StaggerItem>
-								);
-							})}
-						</StaggerContainer>
+						<aside aria-label="Company achievements and statistics">
+							<StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4">
+								{STATISTICS.map((stat) => {
+									const IconComponent = stat.icon;
+									return (
+										<StaggerItem key={stat.label}>
+											<Card className="text-center p-4 hover:shadow-md transition-shadow">
+												<CardContent className="p-0">
+													<div className="w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-2">
+														<IconComponent
+															className="size-6 text-muted-foreground"
+															aria-hidden="true"
+														/>
+													</div>
+													<div className="text-2xl font-bold text-primary mb-1">
+														{stat.value}
+													</div>
+													<div className="text-sm text-muted-foreground">
+														{stat.label}
+													</div>
+												</CardContent>
+											</Card>
+										</StaggerItem>
+									);
+								})}
+							</StaggerContainer>
+						</aside>
 
 						<FadeUpMotion delay={0.3}>
 							<div className="flex items-center gap-2">
@@ -149,26 +155,32 @@ export default function About() {
 									{[1, 2, 3].map((i) => (
 										<Avatar key={i} className="size-10">
 											<AvatarFallback>
-												<UserIcon className="size-6 text-muted-foreground" />
+												<UserIcon
+													className="size-6 text-muted-foreground"
+													aria-hidden="true"
+												/>
 											</AvatarFallback>
 										</Avatar>
 									))}
 								</div>
 								<div>
-									<h3 className="textsm font-medium">
-										Trusted by 150+ companies
+									<h3 className="text-sm font-medium">
+										Trusted by 150+ companies worldwide
 									</h3>
 									<div className="flex items-center gap-1 text-muted-foreground text-sm">
-										<StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
-										<span>4.9/5 client satisfaction</span>
+										<StarIcon
+											className="w-4 h-4 text-yellow-500 fill-current"
+											aria-hidden="true"
+										/>
+										<span>4.9/5 client satisfaction rating</span>
 									</div>
 								</div>
 							</div>
 						</FadeUpMotion>
-					</div>
+					</article>
 
-					<div className="space-y-8">
-						<div>
+					<aside className="space-y-8">
+						<section aria-label="Technology stack and expertise areas">
 							<FadeUpMotion>
 								<h3 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6">
 									Technology Expertise
@@ -189,22 +201,23 @@ export default function About() {
 									</StaggerItem>
 								))}
 							</StaggerContainer>
-						</div>
+						</section>
 
 						<FadeUpMotion delay={0.2}>
 							<div className="relative">
 								<div className="aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
 									<Image
 										src="/assets/hero3.svg"
-										alt="Technology expertise - hands typing on laptop with code in background"
+										alt="Technology stack expertise - developers working with React, Node.js, Python and cloud platforms at Ganethra IT Services Hyderabad office"
 										width={500}
 										height={375}
 										className="w-full h-full object-cover"
+										loading="lazy"
 									/>
 								</div>
 							</div>
 						</FadeUpMotion>
-					</div>
+					</aside>
 				</div>
 			</Container>
 		</section>

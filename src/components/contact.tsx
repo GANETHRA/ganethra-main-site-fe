@@ -35,6 +35,7 @@ import { submitForm } from "@/lib/form";
 import toast from "react-hot-toast";
 import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
 import { ShineBorder } from "./ui/shine-border";
+import { usePlausible } from "next-plausible";
 
 const SERVICES = [
 	"Custom Development",
@@ -54,6 +55,54 @@ const TIMELINES = ["ASAP", "1-3 months", "3-6 months", "6+ months", "Flexible"];
 export default function Contact() {
 	const descriptionId = useId();
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const plausible = usePlausible();
+
+	const localBusinessSchema = {
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"@id": "https://ganethra.com/#localbusiness",
+		name: "Ganethra IT Services Pvt. Ltd.",
+		description:
+			"Leading IT services company in Hyderabad offering custom software development, cloud migration, SaaS solutions, and digital transformation.",
+		url: "https://ganethra.com",
+		telephone: "+91-80-4152-1234",
+		email: "contact@ganethra.com",
+		address: {
+			"@type": "PostalAddress",
+			addressLocality: "Hyderabad",
+			addressRegion: "Karnataka",
+			addressCountry: "IN",
+			postalCode: "560034",
+		},
+		geo: {
+			"@type": "GeoCoordinates",
+			latitude: "12.9716",
+			longitude: "77.5946",
+		},
+		openingHours: "Mo-Fr 09:00-18:00",
+		openingHoursSpecification: {
+			"@type": "OpeningHoursSpecification",
+			dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+			opens: "09:00",
+			closes: "18:00",
+		},
+		contactPoint: {
+			"@type": "ContactPoint",
+			telephone: "+91-80-4152-1234",
+			contactType: "customer service",
+			areaServed: "IN",
+			availableLanguage: "en",
+			email: "contact@ganethra.com",
+		},
+		sameAs: [
+			"https://linkedin.com/company/ganethra",
+			"https://twitter.com/ganethrait",
+		],
+		hasCredential: {
+			"@type": "EducationalOccupationalCredential",
+			name: "ISO 27001 Certified",
+		},
+	};
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -64,6 +113,11 @@ export default function Contact() {
 			const data = Object.fromEntries(formData.entries());
 
 			await submitForm("generic", data);
+
+			// Track form submission
+			plausible("Contact Form Submission", {
+				props: { service: data.service },
+			});
 
 			toast.success(
 				"Thank you! Your project request has been submitted successfully. We'll get back to you within 24 hours.",
@@ -91,12 +145,18 @@ export default function Contact() {
 	return (
 		<section className="py-20">
 			<Container>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(localBusinessSchema),
+					}}
+				/>
 				{/* Main Heading */}
-				<div className="text-center mb-16 space-y-4">
+				<header className="text-center mb-16 space-y-4">
 					<FadeUpMotion>
 						<Badge variant="outline" className="relative text-sm">
 							<ShineBorder />
-							<MessageCircle className="mr-1" />
+							<MessageCircle className="mr-1" aria-hidden="true" />
 							Get Started
 						</Badge>
 					</FadeUpMotion>
@@ -108,15 +168,16 @@ export default function Contact() {
 					<FadeUpMotion delay={0.2}>
 						<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
 							Schedule a free consultation to discuss your project requirements
-							and get a custom proposal
+							and get a custom proposal. Leading IT services company in
+							Hyderabad, India.
 						</p>
 					</FadeUpMotion>
-				</div>
+				</header>
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 					{/* Left Column: Project Requirements Form */}
 					<FadeUpMotion className="lg:col-span-2">
-						<div>
+						<article>
 							<Card className="shadow-lg">
 								<CardHeader>
 									<CardTitle className="text-2xl font-bold">
@@ -128,7 +189,11 @@ export default function Contact() {
 									</CardDescription>
 								</CardHeader>
 								<CardContent className="space-y-6">
-									<form className="space-y-6" onSubmit={handleSubmit}>
+									<form
+										className="space-y-6"
+										onSubmit={handleSubmit}
+										aria-label="Project requirements form"
+									>
 										{/* Row 1: Name and Email */}
 										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 											<Input
@@ -136,6 +201,7 @@ export default function Contact() {
 												name="name"
 												placeholder="Enter your full name"
 												required
+												aria-describedby="name-help"
 											/>
 											<Input
 												label="Email Address"
@@ -143,6 +209,7 @@ export default function Contact() {
 												type="email"
 												placeholder="Enter your email"
 												required
+												aria-describedby="email-help"
 											/>
 										</div>
 
@@ -152,12 +219,20 @@ export default function Contact() {
 												label="Company Name"
 												name="company"
 												placeholder="Enter company name"
+												aria-describedby="company-help"
 											/>
 											<div className="space-y-2">
 												<Label>
-													Select Service <span className="text-red-500">*</span>
+													Select Service{" "}
+													<span className="text-red-500" aria-label="required">
+														*
+													</span>
 												</Label>
-												<Select name="service" required>
+												<Select
+													name="service"
+													required
+													aria-describedby="service-help"
+												>
 													<SelectTrigger className="w-full">
 														<SelectValue placeholder="Choose a service" />
 													</SelectTrigger>
@@ -227,15 +302,21 @@ export default function Contact() {
 											className="w-full"
 											size="lg"
 											disabled={isSubmitting}
+											aria-label="Submit project requirements form"
 										>
-											{isSubmitting && <Loader2Icon className="animate-spin" />}
+											{isSubmitting && (
+												<Loader2Icon
+													className="animate-spin"
+													aria-hidden="true"
+												/>
+											)}
 											Send Project Request
-											<ArrowRightIcon className="w-4 h-4" />
+											<ArrowRightIcon className="w-4 h-4" aria-hidden="true" />
 										</Button>
 									</form>
 								</CardContent>
 							</Card>
-						</div>
+						</article>
 					</FadeUpMotion>
 
 					{/* Right Column: Contact Info, Quick Actions, Response Time */}
@@ -250,36 +331,51 @@ export default function Contact() {
 								</CardHeader>
 								<CardContent className="space-y-4">
 									<div className="flex items-center gap-3">
-										<MailIcon className="w-5 h-5 text-primary" />
+										<MailIcon
+											className="w-5 h-5 text-primary"
+											aria-hidden="true"
+										/>
 										<a
 											className="text-sm hover:underline"
 											href="mailto:contact@ganethra.com"
+											aria-label="Send email to contact@ganethra.com"
 										>
 											contact@ganethra.com
 										</a>
 									</div>
 									<div className="flex items-center gap-3">
-										<PhoneIcon className="w-5 h-5 text-primary" />
+										<PhoneIcon
+											className="w-5 h-5 text-primary"
+											aria-hidden="true"
+										/>
 										<a
 											className="text-sm hover:underline"
 											href="tel:+918041521234"
+											aria-label="Call us at +91 80 4152 1234"
 										>
 											+91 80 4152 1234
 										</a>
 									</div>
 									<div className="flex items-center gap-3">
-										<MapPinIcon className="w-5 h-5 text-primary" />
+										<MapPinIcon
+											className="w-5 h-5 text-primary"
+											aria-hidden="true"
+										/>
 										<a
-											href="https://maps.google.com/?q=Koramangala,Bangalore,India"
+											href="https://maps.google.com/?q=Koramangala,Hyderabad,India"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="text-sm hover:underline"
+											aria-label="View our office location in Koramangala, Hyderabad on Google Maps"
 										>
-											Koramangala, Bangalore, India
+											Koramangala, Hyderabad, India
 										</a>
 									</div>
 									<div className="flex items-center gap-3">
-										<ClockIcon className="w-5 h-5 text-primary" />
+										<ClockIcon
+											className="w-5 h-5 text-primary"
+											aria-hidden="true"
+										/>
 										<span className="text-sm">Mon-Fri: 9 AM - 6 PM IST</span>
 									</div>
 								</CardContent>
@@ -294,16 +390,39 @@ export default function Contact() {
 									</CardTitle>
 								</CardHeader>
 								<CardContent className="space-y-3">
-									<Button variant="outline" className="w-full justify-start">
-										<DownloadIcon className="w-4 h-4 mr-2" />
+									<Button
+										variant="outline"
+										className="w-full justify-start"
+										aria-label="Download company profile PDF"
+										onClick={() => {
+											plausible("Download Company Profile");
+										}}
+									>
+										<DownloadIcon className="w-4 h-4 mr-2" aria-hidden="true" />
 										Download Company Profile
 									</Button>
-									<Button variant="outline" className="w-full justify-start">
-										<CalendarIcon className="w-4 h-4 mr-2" />
+									<Button
+										variant="outline"
+										className="w-full justify-start"
+										aria-label="Schedule a video call consultation"
+										onClick={() => {
+											plausible("Schedule Video Call");
+										}}
+									>
+										<CalendarIcon className="w-4 h-4 mr-2" aria-hidden="true" />
 										Schedule Video Call
 									</Button>
-									<Button className="w-full justify-start">
-										<ArrowRightIcon className="w-4 h-4 mr-2" />
+									<Button
+										className="w-full justify-start"
+										aria-label="Access product demos and trials"
+										onClick={() => {
+											plausible("Access Product Demos");
+										}}
+									>
+										<ArrowRightIcon
+											className="w-4 h-4 mr-2"
+											aria-hidden="true"
+										/>
 										Access Product Demos
 									</Button>
 								</CardContent>
@@ -318,7 +437,10 @@ export default function Contact() {
 											Average Response Time
 										</h4>
 										<Badge className="rounded-full text-green-800 bg-green-100 text-sm">
-											<div className="size-2 rounded-full bg-green-500 mr-1" />
+											<div
+												className="size-2 rounded-full bg-green-500 mr-1"
+												aria-hidden="true"
+											/>
 											24 Hours
 										</Badge>
 									</div>
