@@ -1,41 +1,25 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { usePlausible } from "next-plausible";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Container from "./container";
 import { Button } from "./ui/button";
+import { LanguageSwitcher } from "./ui/language-switcher";
 
-const NAV_LINKS = [
-	{
-		href: "#services",
-		name: "Services",
-		description:
-			"IT Services in Hyderabad - Custom Software Development, Cloud Migration, DevOps",
-	},
-	{
-		href: "#solutions",
-		name: "Products",
-		description:
-			"SaaS Solutions - POS Analytics, TaskFlow Pro, HRMax Suite, SalesForce+, KnowledgeHub",
-	},
-	{
-		href: "#about",
-		name: "About",
-		description:
-			"About Ganethra IT Services - 8+ Years Excellence in IT Innovation",
-	},
+// Navigation link keys for translation
+const NAV_LINK_KEYS = [
+	{ href: "#services", key: "services", descKey: "servicesDescription" },
+	{ href: "#solutions", key: "products", descKey: "productsDescription" },
+	{ href: "#about", key: "about", descKey: "aboutDescription" },
 	{
 		href: "#case-studies",
-		name: "Case Studies",
-		description: "Success Stories - Real Results and Client Testimonials",
+		key: "caseStudies",
+		descKey: "caseStudiesDescription",
 	},
-	{
-		href: "#contact",
-		name: "Contact",
-		description: "Contact Us - Get Free IT Consultation and Project Quote",
-	},
+	{ href: "#contact", key: "contact", descKey: "contactDescription" },
 ];
 
 export default function Navbar() {
@@ -43,6 +27,15 @@ export default function Navbar() {
 	const [activeSection, setActiveSection] = useState("");
 	const headerRef = useRef<HTMLHeadingElement>(null);
 	const plausible = usePlausible();
+	const t = useTranslations("nav");
+	const tCommon = useTranslations("common");
+
+	// Get translated nav links
+	const NAV_LINKS = NAV_LINK_KEYS.map(({ href, key, descKey }) => ({
+		href,
+		name: t(key),
+		description: t(descKey),
+	}));
 	// Close mobile menu when clicking outside or on escape key
 	useEffect(() => {
 		const handleEscape = (e: KeyboardEvent) => {
@@ -245,7 +238,8 @@ export default function Navbar() {
 								</ul>
 							</div>
 
-							<div className="mt-6 lg:mt-0">
+							<div className="mt-6 lg:mt-0 flex items-center gap-2">
+								<LanguageSwitcher />
 								<Link
 									href="https://iam.ganethra.com"
 									aria-label="Login to Ganethra IT Services portal"
@@ -258,7 +252,7 @@ export default function Navbar() {
 									}}
 								>
 									<Button className="w-full lg:w-auto">
-										Login{" "}
+										{tCommon("login")}{" "}
 										<ArrowRightIcon
 											className="w-4 h-4 ml-1"
 											aria-hidden="true"

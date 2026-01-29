@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "詳細を見る",
+		"getStarted": "始める",
+		"contactUs": "お問い合わせ",
+		"readMore": "続きを読む",
+		"viewAll": "すべて表示",
+		"submit": "送信",
+		"loading": "読み込み中...",
+		"error": "エラーが発生しました",
+		"success": "成功！",
+		"login": "ログイン",
+		"startFreeTrial": "無料トライアル開始",
+		"viewProducts": "製品を見る",
+		"getFreeQuote": "無料見積もり",
+		"startingAt": "から",
+		"perMonth": "月額"
+	},
+	"nav": {
+		"services": "サービス",
+		"products": "製品",
+		"about": "会社概要",
+		"caseStudies": "導入事例",
+		"contact": "お問い合わせ",
+		"servicesDescription": "ハイデラバードのITサービス - カスタムソフトウェア開発、クラウド移行、DevOps",
+		"productsDescription": "SaaSソリューション - POS Analytics、TaskFlow Pro、HRMax Suite、SalesForce+、KnowledgeHub",
+		"aboutDescription": "Ganethra IT Servicesについて - 8年以上のIT革新における卓越性",
+		"caseStudiesDescription": "成功事例 - 実際の結果とお客様の声",
+		"contactDescription": "お問い合わせ - 無料IT相談とプロジェクト見積もり"
+	},
+	"hero": {
+		"badge": "ITサービス＆SaaSソリューション",
+		"title": "ビジネスを変革する",
+		"titleHighlight": "最新テクノロジー",
+		"description": "レガシーシステムのモダナイゼーションから最先端のSaaS製品まで。世界中の500社以上の企業に成長と効率性を推進するスケーラブルなソリューションを提供しています。インド・ハイデラバードの大手ITサービス企業。",
+		"projectsDelivered": "納品プロジェクト数",
+		"happyClients": "満足したお客様",
+		"teamMembers": "チームメンバー",
+		"liveActivity": "ライブアクティビティ"
+	},
+	"services": {
+		"badge": "サービス",
+		"title": "エンタープライズグレードITソリューション",
+		"description": "ビジネスの成長とデジタルトランスフォーメーションを加速するために設計された包括的なITソリューション。インド・ハイデラバードの大手ITサービス企業。",
+		"keyFeatures": "主な機能：",
+		"customSoftware": {
+			"title": "カスタムソフトウェア開発",
+			"description": "React、Node.js、Python、.NETを含む最新技術スタックで構築されたエンタープライズグレードアプリケーション",
+			"features": {
+				"webApps": "Webアプリケーション",
+				"apiDev": "API開発",
+				"microservices": "マイクロサービス",
+				"legacyMod": "レガシーモダナイゼーション"
+			}
+		},
+		"cloudMigration": {
+			"title": "クラウド移行＆アーキテクチャ",
+			"description": "AWS、Azure、またはGCPへのシームレスな移行とスケーラビリティに最適化されたアーキテクチャ",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "クラウドアーキテクチャ",
+				"devopsCicd": "DevOps＆CI/CD",
+				"costOpt": "コスト最適化"
+			}
+		},
+		"dataEngineering": {
+			"title": "データエンジニアリング＆アナリティクス",
+			"description": "最新のデータウェアハウジングとMLパイプラインで生データを実用的なインサイトに変換",
+			"features": {
+				"dataWarehouse": "データウェアハウジング",
+				"etlPipelines": "ETLパイプライン",
+				"dashboards": "ダッシュボード作成",
+				"predictive": "予測分析"
+			}
+		},
+		"cybersecurity": {
+			"title": "サイバーセキュリティソリューション",
+			"description": "包括的なセキュリティ監査、ペネトレーションテスト、コンプライアンス実装",
+			"features": {
+				"securityAudits": "セキュリティ監査",
+				"penTesting": "ペネトレーションテスト",
+				"compliance": "コンプライアンス",
+				"incidentResponse": "インシデント対応"
+			}
+		},
+		"digitalTransformation": {
+			"title": "デジタルトランスフォーメーション",
+			"description": "プロセス自動化とワークフロー最適化によるエンドツーエンドのデジタルトランスフォーメーション",
+			"features": {
+				"processAuto": "プロセス自動化",
+				"legacyMod": "レガシーシステムモダナイゼーション",
+				"changeMgmt": "変更管理",
+				"training": "トレーニングプログラム"
+			}
+		},
+		"devops": {
+			"title": "DevOps＆インフラストラクチャ",
+			"description": "CI/CDパイプライン、コンテナオーケストレーション、インフラ自動化",
+			"features": {
+				"processAuto": "プロセス自動化",
+				"legacyMod": "レガシーシステムモダナイゼーション",
+				"changeMgmt": "変更管理",
+				"training": "トレーニングプログラム"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "SaaS製品",
+		"title": "すぐに導入可能なソリューション",
+		"description": "業界リーダーに信頼されている本番対応のSaaS製品。各ソリューションは実績があり、スケーラブルで、専用のエンタープライズサポートが付属しています。",
+		"keyFeatures": "主な機能",
+		"activeUsers": "アクティブユーザー",
+		"reliability": "信頼性",
+		"integrations": "インテグレーション",
+		"categories": {
+			"analyticsBI": "アナリティクス＆BI",
+			"projectMgmt": "プロジェクト管理",
+			"humanResources": "人事",
+			"salesMarketing": "営業＆マーケティング",
+			"documentation": "ドキュメント"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "リアルタイムインサイト、在庫最適化、予測分析を備えた高度な小売分析プラットフォーム",
+				"features": {
+					"realTimeDashboard": "リアルタイムダッシュボード",
+					"inventoryMgmt": "在庫管理",
+					"mobileApp": "モバイルアプリ",
+					"predictiveAnalytics": "予測分析",
+					"multiStore": "マルチストア対応",
+					"apiIntegration": "API連携"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "Jiraのパワーとアジャイルチーム向けClickUpのシンプルさを兼ね備えた次世代プロジェクト管理",
+				"features": {
+					"agileBoards": "アジャイルボード",
+					"timeTracking": "タイムトラッキング",
+					"teamCollab": "チームコラボレーション",
+					"customWorkflows": "カスタムワークフロー",
+					"advancedReporting": "高度なレポート",
+					"apiAccess": "APIアクセス"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "給与計算、パフォーマンス管理、従業員セルフサービスポータルを備えた完全なHRMS",
+				"features": {
+					"payrollAuto": "給与自動化",
+					"leaveMgmt": "休暇管理",
+					"recruitment": "採用",
+					"performanceReviews": "パフォーマンス評価",
+					"employeePortal": "従業員ポータル",
+					"analytics": "アナリティクス"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "高度なリードスコアリング、営業自動化、カスタマージャーニーマッピングを備えたAI搭載CRM",
+				"features": {
+					"leadScoring": "リードスコアリング",
+					"pipelineMgmt": "パイプライン管理",
+					"mobileCrm": "モバイルCRM",
+					"salesAuto": "営業自動化",
+					"emailIntegration": "メール連携",
+					"aiInsights": "AIインサイト"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "バージョン管理、APIドキュメント、チームWikiを備えた共同ドキュメントプラットフォーム",
+				"features": {
+					"versionControl": "バージョン管理",
+					"teamWikis": "チームWiki",
+					"collaboration": "コラボレーション",
+					"apiDocs": "APIドキュメント",
+					"searchDiscovery": "検索＆発見",
+					"exportOptions": "エクスポートオプション"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "GANETHRAについて",
+		"title": "8年以上のIT革新における卓越性",
+		"description": "2016年設立のGANETHRA IT Servicesは、ブティックコンサルタンシーから本格的なテクノロジーパートナーへと成長し、小売、医療、金融、製造業界の150社以上のクライアントにサービスを提供しています。インド・ハイデラバードを拠点に、グローバルにエンタープライズグレードのITソリューションを提供しています。",
+		"iso": "ISO 27001認証取得",
+		"technologyExpertise": "技術的専門知識",
+		"trustedBy": "世界中の150社以上の企業から信頼",
+		"clientRating": "4.9/5 顧客満足度",
+		"stats": {
+			"projectsDelivered": "納品プロジェクト数",
+			"happyClients": "満足したお客様",
+			"teamMembers": "チームメンバー",
+			"uptimeSla": "稼働率SLA",
+			"support": "サポート",
+			"yearsExperience": "年の経験"
+		}
+	},
+	"caseStudies": {
+		"badge": "成功事例",
+		"title": "実際の結果、実際のインパクト",
+		"description": "私たちのテクノロジーソリューションを通じて、企業がどのように業務を変革し、目覚ましい成長を達成したかをご覧ください。",
+		"challenge": "課題",
+		"solution": "ソリューション",
+		"result": "結果",
+		"technologiesUsed": "使用技術",
+		"cases": {
+			"ecommerce": {
+				"title": "Eコマースプラットフォームのスケールアップ",
+				"client": "MegaMart Online",
+				"duration": "6ヶ月",
+				"challenge": "フェスティバルセール時に10倍のトラフィックを処理",
+				"solution": "オートスケーリング機能を備えたマイクロサービスアーキテクチャ",
+				"result": "ピーク時99.9%の稼働率、300%のパフォーマンス向上"
+			},
+			"legacy": {
+				"title": "レガシーシステムのモダナイゼーション",
+				"client": "Manufacturing Corp",
+				"duration": "12ヶ月",
+				"challenge": "20年前のERPシステムを置き換え",
+				"solution": "ダウンタイムゼロの段階的移行",
+				"result": "コスト50%削減、業務200%高速化"
+			}
+		}
+	},
+	"contact": {
+		"badge": "始める",
+		"title": "ビジネスを変革する準備はできましたか？",
+		"description": "プロジェクト要件についての無料相談を予約し、カスタム提案を受け取りましょう。インド・ハイデラバードの大手ITサービス企業。",
+		"form": {
+			"name": "お名前",
+			"namePlaceholder": "フルネームを入力",
+			"email": "メールアドレス",
+			"emailPlaceholder": "メールアドレスを入力",
+			"company": "会社名",
+			"companyPlaceholder": "会社名を入力",
+			"service": "サービスを選択",
+			"servicePlaceholder": "サービスを選択してください",
+			"budget": "予算範囲",
+			"budgetPlaceholder": "予算範囲を選択",
+			"timeline": "スケジュール",
+			"timelinePlaceholder": "スケジュールを選択",
+			"description": "プロジェクト概要",
+			"descriptionPlaceholder": "プロジェクトの要件、目標、必要な特定の機能について説明してください...",
+			"submit": "プロジェクト依頼を送信",
+			"sending": "送信中...",
+			"successMessage": "ありがとうございます！プロジェクト依頼が正常に送信されました。24時間以内にご連絡いたします。",
+			"errorMessage": "申し訳ございません。リクエストの送信中にエラーが発生しました。もう一度お試しいただくか、直接お問い合わせください。"
+		},
+		"projectRequirements": "プロジェクト要件",
+		"projectRequirementsDesc": "プロジェクトについてお聞かせください。24時間以内にご連絡いたします",
+		"contactInfo": "連絡先情報",
+		"quickActions": "クイックアクション",
+		"downloadProfile": "会社概要をダウンロード",
+		"scheduleCall": "ビデオ通話を予約",
+		"accessDemos": "製品デモにアクセス",
+		"responseTime": "平均応答時間",
+		"responseTimeDesc": "営業日であれば24時間以内にすべてのお問い合わせに対応いたします",
+		"hours": "24時間",
+		"businessHours": "月〜金: 9時〜18時 IST",
+		"services": {
+			"customDev": "カスタム開発",
+			"cloudMigration": "クラウド移行＆アーキテクチャ",
+			"dataEngineering": "データエンジニアリング＆アナリティクス",
+			"cybersecurity": "サイバーセキュリティソリューション",
+			"digitalTransformation": "デジタルトランスフォーメーション",
+			"devops": "DevOps＆インフラストラクチャ",
+			"saasProducts": "SaaS製品",
+			"itConsulting": "ITコンサルティング"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "2016年以来、革新的なテクノロジーソリューションと最先端のSaaS製品を通じてビジネスを変革。インド・ハイデラバードの大手ITサービス企業。",
+		"isoCertified": "ISO 27001認証取得",
+		"itServicesTitle": "ハイデラバードのITサービス",
+		"saasTitle": "SaaSソリューション",
+		"companyTitle": "会社情報",
+		"copyright": "© {year} GANETHRA IT Services Pvt. Ltd. All rights reserved.",
+		"madeIn": "Made in India",
+		"servingGlobally": "グローバルにサービス提供",
+		"links": {
+			"aboutUs": "会社概要",
+			"careers": "採用情報",
+			"caseStudies": "導入事例",
+			"blog": "ブログ",
+			"privacy": "プライバシーポリシー",
+			"terms": "利用規約"
+		}
+	},
+	"languageSwitcher": {
+		"label": "言語を選択",
+		"hint": {
+			"message": "このページは{language}でご利用いただけます",
+			"switchButton": "{language}に切り替え",
+			"dismiss": "閉じる"
+		}
+	}
+}

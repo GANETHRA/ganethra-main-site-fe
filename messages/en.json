@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "Learn More",
+		"getStarted": "Get Started",
+		"contactUs": "Contact Us",
+		"readMore": "Read More",
+		"viewAll": "View All",
+		"submit": "Submit",
+		"loading": "Loading...",
+		"error": "Something went wrong",
+		"success": "Success!",
+		"login": "Login",
+		"startFreeTrial": "Start Free Trial",
+		"viewProducts": "View Products",
+		"getFreeQuote": "Get Free Quote",
+		"startingAt": "Starting at",
+		"perMonth": "per month"
+	},
+	"nav": {
+		"services": "Services",
+		"products": "Products",
+		"about": "About",
+		"caseStudies": "Case Studies",
+		"contact": "Contact",
+		"servicesDescription": "IT Services in Hyderabad - Custom Software Development, Cloud Migration, DevOps",
+		"productsDescription": "SaaS Solutions - POS Analytics, TaskFlow Pro, HRMax Suite, SalesForce+, KnowledgeHub",
+		"aboutDescription": "About Ganethra IT Services - 8+ Years Excellence in IT Innovation",
+		"caseStudiesDescription": "Success Stories - Real Results and Client Testimonials",
+		"contactDescription": "Contact Us - Get Free IT Consultation and Project Quote"
+	},
+	"hero": {
+		"badge": "IT Services & SaaS Solutions",
+		"title": "Transform Your Business with",
+		"titleHighlight": "Modern Tech",
+		"description": "From legacy system modernization to cutting-edge SaaS products. We deliver scalable solutions that drive growth and efficiency for 500+ companies worldwide. Leading IT services company in Hyderabad, India.",
+		"projectsDelivered": "Projects Delivered",
+		"happyClients": "Happy Clients",
+		"teamMembers": "Team Members",
+		"liveActivity": "Live Activity"
+	},
+	"services": {
+		"badge": "Our Services",
+		"title": "Enterprise-Grade IT Solutions",
+		"description": "Comprehensive IT solutions designed to accelerate your business growth and digital transformation journey. Leading IT services company in Hyderabad, India.",
+		"keyFeatures": "Key Features:",
+		"customSoftware": {
+			"title": "Custom Software Development",
+			"description": "Enterprise-grade applications built with modern tech stacks including React, Node.js, Python, and .NET",
+			"features": {
+				"webApps": "Web Applications",
+				"apiDev": "API Development",
+				"microservices": "Microservices",
+				"legacyMod": "Legacy Modernization"
+			}
+		},
+		"cloudMigration": {
+			"title": "Cloud Migration & Architecture",
+			"description": "Seamless migration to AWS, Azure, or GCP with optimized architectures for scalability",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "Cloud Architecture",
+				"devopsCicd": "DevOps & CI/CD",
+				"costOpt": "Cost Optimization"
+			}
+		},
+		"dataEngineering": {
+			"title": "Data Engineering & Analytics",
+			"description": "Transform raw data into actionable insights with modern data warehousing and ML pipelines",
+			"features": {
+				"dataWarehouse": "Data Warehousing",
+				"etlPipelines": "ETL Pipelines",
+				"dashboards": "Dashboard Creation",
+				"predictive": "Predictive Analytics"
+			}
+		},
+		"cybersecurity": {
+			"title": "Cybersecurity Solutions",
+			"description": "Comprehensive security audits, penetration testing, and compliance implementations",
+			"features": {
+				"securityAudits": "Security Audits",
+				"penTesting": "Penetration Testing",
+				"compliance": "Compliance",
+				"incidentResponse": "Incident Response"
+			}
+		},
+		"digitalTransformation": {
+			"title": "Digital Transformation",
+			"description": "End-to-end digital transformation with process automation and workflow optimization",
+			"features": {
+				"processAuto": "Process Automation",
+				"legacyMod": "Legacy System Modernization",
+				"changeMgmt": "Change Management",
+				"training": "Training Programs"
+			}
+		},
+		"devops": {
+			"title": "DevOps & Infrastructure",
+			"description": "CI/CD pipelines, container orchestration, and infrastructure automation",
+			"features": {
+				"processAuto": "Process Automation",
+				"legacyMod": "Legacy System Modernization",
+				"changeMgmt": "Change Management",
+				"training": "Training Programs"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "SaaS Products",
+		"title": "Ready-to-Deploy Solutions",
+		"description": "Production-ready SaaS products trusted by industry leaders. Each solution is battle-tested, scalable, and comes with dedicated enterprise support.",
+		"keyFeatures": "Key Features",
+		"activeUsers": "Active Users",
+		"reliability": "Reliability",
+		"integrations": "Integrations",
+		"categories": {
+			"analyticsBI": "Analytics & BI",
+			"projectMgmt": "Project Management",
+			"humanResources": "Human Resources",
+			"salesMarketing": "Sales & Marketing",
+			"documentation": "Documentation"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "Advanced retail analytics platform with real-time insights, inventory optimization, and predictive analytics",
+				"features": {
+					"realTimeDashboard": "Real-time Dashboard",
+					"inventoryMgmt": "Inventory Management",
+					"mobileApp": "Mobile App",
+					"predictiveAnalytics": "Predictive Analytics",
+					"multiStore": "Multi-store Support",
+					"apiIntegration": "API Integration"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "Next-gen project management combining Jira's power with ClickUp's simplicity for agile teams",
+				"features": {
+					"agileBoards": "Agile Boards",
+					"timeTracking": "Time Tracking",
+					"teamCollab": "Team Collaboration",
+					"customWorkflows": "Custom Workflows",
+					"advancedReporting": "Advanced Reporting",
+					"apiAccess": "API Access"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "Complete HRMS with payroll, performance management, and employee self-service portal",
+				"features": {
+					"payrollAuto": "Payroll Automation",
+					"leaveMgmt": "Leave Management",
+					"recruitment": "Recruitment",
+					"performanceReviews": "Performance Reviews",
+					"employeePortal": "Employee Portal",
+					"analytics": "Analytics"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "AI-powered CRM with advanced lead scoring, sales automation, and customer journey mapping",
+				"features": {
+					"leadScoring": "Lead Scoring",
+					"pipelineMgmt": "Pipeline Management",
+					"mobileCrm": "Mobile CRM",
+					"salesAuto": "Sales Automation",
+					"emailIntegration": "Email Integration",
+					"aiInsights": "AI Insights"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "Collaborative documentation platform with version control, API docs, and team wikis",
+				"features": {
+					"versionControl": "Version Control",
+					"teamWikis": "Team Wikis",
+					"collaboration": "Collaboration",
+					"apiDocs": "API Documentation",
+					"searchDiscovery": "Search & Discovery",
+					"exportOptions": "Export Options"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "About GANETHRA",
+		"title": "8+ Years of Excellence in IT Innovation",
+		"description": "Founded in 2016, GANETHRA IT Services has evolved from a boutique consultancy to a full-scale technology partner, serving 150+ clients across retail, healthcare, finance, and manufacturing sectors. Based in Hyderabad, India, we deliver enterprise-grade IT solutions globally.",
+		"iso": "ISO 27001 Certified",
+		"technologyExpertise": "Technology Expertise",
+		"trustedBy": "Trusted by 150+ companies worldwide",
+		"clientRating": "4.9/5 client satisfaction rating",
+		"stats": {
+			"projectsDelivered": "Projects Delivered",
+			"happyClients": "Happy Clients",
+			"teamMembers": "Team Members",
+			"uptimeSla": "Uptime SLA",
+			"support": "Support",
+			"yearsExperience": "Years Experience"
+		}
+	},
+	"caseStudies": {
+		"badge": "Success Stories",
+		"title": "Real Results, Real Impact",
+		"description": "Discover how we've helped businesses transform their operations and achieve remarkable growth through our technology solutions.",
+		"challenge": "Challenge",
+		"solution": "Solution",
+		"result": "Result",
+		"technologiesUsed": "Technologies Used",
+		"cases": {
+			"ecommerce": {
+				"title": "E-commerce Platform Scale-up",
+				"client": "MegaMart Online",
+				"duration": "6 months",
+				"challenge": "Handle 10x traffic during festival sales",
+				"solution": "Microservices architecture with auto-scaling",
+				"result": "99.9% uptime during peak traffic, 300% performance improvement"
+			},
+			"legacy": {
+				"title": "Legacy System Modernization",
+				"client": "Manufacturing Corp",
+				"duration": "12 months",
+				"challenge": "Replace 20-year-old ERP system",
+				"solution": "Phased migration with zero downtime",
+				"result": "50% cost reduction, 200% faster operations"
+			}
+		}
+	},
+	"contact": {
+		"badge": "Get Started",
+		"title": "Ready to Transform Your Business?",
+		"description": "Schedule a free consultation to discuss your project requirements and get a custom proposal. Leading IT services company in Hyderabad, India.",
+		"form": {
+			"name": "Your Name",
+			"namePlaceholder": "Enter your full name",
+			"email": "Email Address",
+			"emailPlaceholder": "Enter your email",
+			"company": "Company Name",
+			"companyPlaceholder": "Enter company name",
+			"service": "Select Service",
+			"servicePlaceholder": "Choose a service",
+			"budget": "Budget Range",
+			"budgetPlaceholder": "Select budget range",
+			"timeline": "Timeline",
+			"timelinePlaceholder": "Select timeline",
+			"description": "Project Description",
+			"descriptionPlaceholder": "Describe your project requirements, goals, and any specific features you need...",
+			"submit": "Send Project Request",
+			"sending": "Sending...",
+			"successMessage": "Thank you! Your project request has been submitted successfully. We'll get back to you within 24 hours.",
+			"errorMessage": "Sorry, there was an error submitting your request. Please try again or contact us directly."
+		},
+		"projectRequirements": "Project Requirements",
+		"projectRequirementsDesc": "Tell us about your project and we'll get back to you within 24 hours",
+		"contactInfo": "Contact Information",
+		"quickActions": "Quick Actions",
+		"downloadProfile": "Download Company Profile",
+		"scheduleCall": "Schedule Video Call",
+		"accessDemos": "Access Product Demos",
+		"responseTime": "Average Response Time",
+		"responseTimeDesc": "We respond to all inquiries within 24 hours during business days",
+		"hours": "24 Hours",
+		"businessHours": "Mon-Fri: 9 AM - 6 PM IST",
+		"services": {
+			"customDev": "Custom Development",
+			"cloudMigration": "Cloud Migration & Architecture",
+			"dataEngineering": "Data Engineering & Analytics",
+			"cybersecurity": "Cybersecurity Solutions",
+			"digitalTransformation": "Digital Transformation",
+			"devops": "DevOps & Infrastructure",
+			"saasProducts": "SaaS Products",
+			"itConsulting": "IT Consulting"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "Transforming businesses through innovative technology solutions and cutting-edge SaaS products since 2016. Leading IT services company in Hyderabad, India.",
+		"isoCertified": "ISO 27001 Certified",
+		"itServicesTitle": "IT Services in Hyderabad",
+		"saasTitle": "SaaS Solutions",
+		"companyTitle": "Company",
+		"copyright": "© {year} GANETHRA IT Services Pvt. Ltd. All rights reserved.",
+		"madeIn": "Made in India",
+		"servingGlobally": "Serving Globally",
+		"links": {
+			"aboutUs": "About Us",
+			"careers": "Careers",
+			"caseStudies": "Case Studies",
+			"blog": "Blog",
+			"privacy": "Privacy Policy",
+			"terms": "Terms of Service"
+		}
+	},
+	"languageSwitcher": {
+		"label": "Select Language",
+		"hint": {
+			"message": "This page is available in {language}",
+			"switchButton": "Switch to {language}",
+			"dismiss": "Dismiss"
+		}
+	}
+}

@@ -1,7 +1,5 @@
-import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import PlausibleProvider from "next-plausible";
-import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -174,12 +172,7 @@ export default function RootLayout({
 					enabled
 				/>
 			</head>
-			<body className="antialiased">
-				<Navbar />
-				<Toaster />
-				{children}
-				{/* </PlausibleProvider> */}
-			</body>
+			<body className="antialiased">{children}</body>
 		</html>
 	);
 }

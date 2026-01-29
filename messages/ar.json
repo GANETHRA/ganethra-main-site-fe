@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "معرفة المزيد",
+		"getStarted": "ابدأ الآن",
+		"contactUs": "اتصل بنا",
+		"readMore": "اقرأ المزيد",
+		"viewAll": "عرض الكل",
+		"submit": "إرسال",
+		"loading": "جاري التحميل...",
+		"error": "حدث خطأ ما",
+		"success": "نجاح!",
+		"login": "تسجيل الدخول",
+		"startFreeTrial": "ابدأ التجربة المجانية",
+		"viewProducts": "عرض المنتجات",
+		"getFreeQuote": "احصل على عرض أسعار مجاني",
+		"startingAt": "ابتداءً من",
+		"perMonth": "شهرياً"
+	},
+	"nav": {
+		"services": "الخدمات",
+		"products": "المنتجات",
+		"about": "من نحن",
+		"caseStudies": "دراسات الحالة",
+		"contact": "اتصل بنا",
+		"servicesDescription": "خدمات تكنولوجيا المعلومات في حيدر أباد - تطوير البرمجيات المخصصة، الترحيل السحابي، DevOps",
+		"productsDescription": "حلول SaaS - POS Analytics، TaskFlow Pro، HRMax Suite، SalesForce+، KnowledgeHub",
+		"aboutDescription": "عن Ganethra IT Services - أكثر من 8 سنوات من التميز في ابتكار تكنولوجيا المعلومات",
+		"caseStudiesDescription": "قصص النجاح - نتائج حقيقية وشهادات العملاء",
+		"contactDescription": "اتصل بنا - استشارة مجانية لتكنولوجيا المعلومات وعرض أسعار المشروع"
+	},
+	"hero": {
+		"badge": "خدمات تكنولوجيا المعلومات وحلول SaaS",
+		"title": "حوّل عملك مع",
+		"titleHighlight": "التكنولوجيا الحديثة",
+		"description": "من تحديث الأنظمة القديمة إلى منتجات SaaS المتطورة. نقدم حلولاً قابلة للتطوير تدفع النمو والكفاءة لأكثر من 500 شركة حول العالم. شركة رائدة في خدمات تكنولوجيا المعلومات في حيدر أباد، الهند.",
+		"projectsDelivered": "المشاريع المنجزة",
+		"happyClients": "العملاء السعداء",
+		"teamMembers": "أعضاء الفريق",
+		"liveActivity": "النشاط المباشر"
+	},
+	"services": {
+		"badge": "خدماتنا",
+		"title": "حلول تكنولوجيا المعلومات على مستوى المؤسسة",
+		"description": "حلول تكنولوجيا المعلومات الشاملة المصممة لتسريع نمو عملك ورحلة التحول الرقمي. شركة رائدة في خدمات تكنولوجيا المعلومات في حيدر أباد، الهند.",
+		"keyFeatures": "الميزات الرئيسية:",
+		"customSoftware": {
+			"title": "تطوير البرمجيات المخصصة",
+			"description": "تطبيقات على مستوى المؤسسة مبنية بأحدث التقنيات بما في ذلك React وNode.js وPython و.NET",
+			"features": {
+				"webApps": "تطبيقات الويب",
+				"apiDev": "تطوير API",
+				"microservices": "الخدمات المصغرة",
+				"legacyMod": "تحديث الأنظمة القديمة"
+			}
+		},
+		"cloudMigration": {
+			"title": "الترحيل السحابي والهندسة المعمارية",
+			"description": "ترحيل سلس إلى AWS أو Azure أو GCP مع هندسة معمارية محسنة للقابلية للتوسع",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "الهندسة المعمارية السحابية",
+				"devopsCicd": "DevOps و CI/CD",
+				"costOpt": "تحسين التكلفة"
+			}
+		},
+		"dataEngineering": {
+			"title": "هندسة البيانات والتحليلات",
+			"description": "تحويل البيانات الخام إلى رؤى قابلة للتنفيذ مع مستودعات البيانات الحديثة وخطوط أنابيب التعلم الآلي",
+			"features": {
+				"dataWarehouse": "مستودعات البيانات",
+				"etlPipelines": "خطوط أنابيب ETL",
+				"dashboards": "إنشاء لوحات المعلومات",
+				"predictive": "التحليلات التنبؤية"
+			}
+		},
+		"cybersecurity": {
+			"title": "حلول الأمن السيبراني",
+			"description": "تدقيقات أمنية شاملة واختبار الاختراق وتنفيذ الامتثال",
+			"features": {
+				"securityAudits": "تدقيقات الأمان",
+				"penTesting": "اختبار الاختراق",
+				"compliance": "الامتثال",
+				"incidentResponse": "الاستجابة للحوادث"
+			}
+		},
+		"digitalTransformation": {
+			"title": "التحول الرقمي",
+			"description": "التحول الرقمي الشامل مع أتمتة العمليات وتحسين سير العمل",
+			"features": {
+				"processAuto": "أتمتة العمليات",
+				"legacyMod": "تحديث الأنظمة القديمة",
+				"changeMgmt": "إدارة التغيير",
+				"training": "برامج التدريب"
+			}
+		},
+		"devops": {
+			"title": "DevOps والبنية التحتية",
+			"description": "خطوط أنابيب CI/CD وتنسيق الحاويات وأتمتة البنية التحتية",
+			"features": {
+				"processAuto": "أتمتة العمليات",
+				"legacyMod": "تحديث الأنظمة القديمة",
+				"changeMgmt": "إدارة التغيير",
+				"training": "برامج التدريب"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "منتجات SaaS",
+		"title": "حلول جاهزة للنشر",
+		"description": "منتجات SaaS جاهزة للإنتاج يثق بها قادة الصناعة. كل حل مختبر ميدانياً وقابل للتطوير ويأتي مع دعم مؤسسي مخصص.",
+		"keyFeatures": "الميزات الرئيسية",
+		"activeUsers": "المستخدمون النشطون",
+		"reliability": "الموثوقية",
+		"integrations": "التكاملات",
+		"categories": {
+			"analyticsBI": "التحليلات وذكاء الأعمال",
+			"projectMgmt": "إدارة المشاريع",
+			"humanResources": "الموارد البشرية",
+			"salesMarketing": "المبيعات والتسويق",
+			"documentation": "التوثيق"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "منصة تحليلات التجزئة المتقدمة مع رؤى في الوقت الفعلي وتحسين المخزون والتحليلات التنبؤية",
+				"features": {
+					"realTimeDashboard": "لوحة معلومات فورية",
+					"inventoryMgmt": "إدارة المخزون",
+					"mobileApp": "تطبيق الجوال",
+					"predictiveAnalytics": "التحليلات التنبؤية",
+					"multiStore": "دعم متعدد المتاجر",
+					"apiIntegration": "تكامل API"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "إدارة مشاريع الجيل القادم تجمع بين قوة Jira وبساطة ClickUp",
+				"features": {
+					"agileBoards": "لوحات Agile",
+					"timeTracking": "تتبع الوقت",
+					"teamCollab": "التعاون الجماعي",
+					"customWorkflows": "سير عمل مخصص",
+					"advancedReporting": "تقارير متقدمة",
+					"apiAccess": "وصول API"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "نظام HRMS كامل مع الرواتب وإدارة الأداء وبوابة الموظفين",
+				"features": {
+					"payrollAuto": "أتمتة الرواتب",
+					"leaveMgmt": "إدارة الإجازات",
+					"recruitment": "التوظيف",
+					"performanceReviews": "مراجعات الأداء",
+					"employeePortal": "بوابة الموظفين",
+					"analytics": "التحليلات"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "CRM مدعوم بالذكاء الاصطناعي مع تسجيل العملاء المحتملين وأتمتة المبيعات",
+				"features": {
+					"leadScoring": "تسجيل العملاء المحتملين",
+					"pipelineMgmt": "إدارة خط الأنابيب",
+					"mobileCrm": "CRM الجوال",
+					"salesAuto": "أتمتة المبيعات",
+					"emailIntegration": "تكامل البريد",
+					"aiInsights": "رؤى AI"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "منصة توثيق تعاونية مع التحكم في الإصدار وويكي الفريق",
+				"features": {
+					"versionControl": "التحكم في الإصدار",
+					"teamWikis": "ويكي الفريق",
+					"collaboration": "التعاون",
+					"apiDocs": "توثيق API",
+					"searchDiscovery": "البحث والاكتشاف",
+					"exportOptions": "خيارات التصدير"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "عن GANETHRA",
+		"title": "أكثر من 8 سنوات من التميز في ابتكار تكنولوجيا المعلومات",
+		"description": "تأسست في عام 2016، تطورت Ganethra IT Services من استشارات بوتيك إلى شريك تكنولوجي كامل النطاق، تخدم أكثر من 150 عميلاً في قطاعات التجزئة والرعاية الصحية والمالية والتصنيع. مقرها في حيدر أباد، الهند، نقدم حلول تكنولوجيا المعلومات على مستوى المؤسسة عالمياً.",
+		"iso": "معتمد ISO 27001",
+		"technologyExpertise": "الخبرة التقنية",
+		"trustedBy": "موثوق بها من قبل أكثر من 150 شركة حول العالم",
+		"clientRating": "4.9/5 تقييم رضا العملاء",
+		"stats": {
+			"projectsDelivered": "المشاريع المنجزة",
+			"happyClients": "العملاء السعداء",
+			"teamMembers": "أعضاء الفريق",
+			"uptimeSla": "اتفاقية مستوى الخدمة للتشغيل",
+			"support": "الدعم",
+			"yearsExperience": "سنوات الخبرة"
+		}
+	},
+	"caseStudies": {
+		"badge": "قصص النجاح",
+		"title": "نتائج حقيقية، تأثير حقيقي",
+		"description": "اكتشف كيف ساعدنا الشركات على تحويل عملياتها وتحقيق نمو ملحوظ من خلال حلولنا التكنولوجية.",
+		"challenge": "التحدي",
+		"solution": "الحل",
+		"result": "النتيجة",
+		"technologiesUsed": "التقنيات المستخدمة",
+		"cases": {
+			"ecommerce": {
+				"title": "توسيع منصة التجارة الإلكترونية",
+				"client": "MegaMart Online",
+				"duration": "6 أشهر",
+				"challenge": "التعامل مع 10 أضعاف حركة المرور خلال مبيعات المهرجانات",
+				"solution": "بنية الخدمات المصغرة مع التوسع التلقائي",
+				"result": "99.9% وقت التشغيل خلال ذروة حركة المرور، تحسين الأداء بنسبة 300%"
+			},
+			"legacy": {
+				"title": "تحديث النظام القديم",
+				"client": "Manufacturing Corp",
+				"duration": "12 شهراً",
+				"challenge": "استبدال نظام ERP عمره 20 عاماً",
+				"solution": "ترحيل مرحلي بدون توقف",
+				"result": "خفض التكلفة بنسبة 50%، العمليات أسرع بنسبة 200%"
+			}
+		}
+	},
+	"contact": {
+		"badge": "ابدأ الآن",
+		"title": "مستعد لتحويل عملك؟",
+		"description": "احجز استشارة مجانية لمناقشة متطلبات مشروعك والحصول على عرض مخصص. شركة رائدة في خدمات تكنولوجيا المعلومات في حيدر أباد، الهند.",
+		"form": {
+			"name": "اسمك",
+			"namePlaceholder": "أدخل اسمك الكامل",
+			"email": "عنوان البريد الإلكتروني",
+			"emailPlaceholder": "أدخل بريدك الإلكتروني",
+			"company": "اسم الشركة",
+			"companyPlaceholder": "أدخل اسم الشركة",
+			"service": "اختر الخدمة",
+			"servicePlaceholder": "اختر خدمة",
+			"budget": "نطاق الميزانية",
+			"budgetPlaceholder": "اختر نطاق الميزانية",
+			"timeline": "الجدول الزمني",
+			"timelinePlaceholder": "اختر الجدول الزمني",
+			"description": "وصف المشروع",
+			"descriptionPlaceholder": "صف متطلبات مشروعك وأهدافك وأي ميزات محددة تحتاجها...",
+			"submit": "إرسال طلب المشروع",
+			"sending": "جاري الإرسال...",
+			"successMessage": "شكراً لك! تم إرسال طلب مشروعك بنجاح. سنرد عليك خلال 24 ساعة.",
+			"errorMessage": "عذراً، حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة."
+		},
+		"projectRequirements": "متطلبات المشروع",
+		"projectRequirementsDesc": "أخبرنا عن مشروعك وسنرد عليك خلال 24 ساعة",
+		"contactInfo": "معلومات الاتصال",
+		"quickActions": "إجراءات سريعة",
+		"downloadProfile": "تحميل ملف الشركة",
+		"scheduleCall": "جدولة مكالمة فيديو",
+		"accessDemos": "الوصول إلى عروض المنتجات",
+		"responseTime": "متوسط وقت الاستجابة",
+		"responseTimeDesc": "نرد على جميع الاستفسارات خلال 24 ساعة في أيام العمل",
+		"hours": "24 ساعة",
+		"businessHours": "الاثنين-الجمعة: 9 صباحاً - 6 مساءً IST",
+		"services": {
+			"customDev": "التطوير المخصص",
+			"cloudMigration": "الترحيل السحابي والهندسة المعمارية",
+			"dataEngineering": "هندسة البيانات والتحليلات",
+			"cybersecurity": "حلول الأمن السيبراني",
+			"digitalTransformation": "التحول الرقمي",
+			"devops": "DevOps والبنية التحتية",
+			"saasProducts": "منتجات SaaS",
+			"itConsulting": "استشارات تكنولوجيا المعلومات"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "تحويل الأعمال من خلال حلول تكنولوجية مبتكرة ومنتجات SaaS متطورة منذ عام 2016. شركة رائدة في خدمات تكنولوجيا المعلومات في حيدر أباد، الهند.",
+		"isoCertified": "معتمد ISO 27001",
+		"itServicesTitle": "خدمات تكنولوجيا المعلومات في حيدر أباد",
+		"saasTitle": "حلول SaaS",
+		"companyTitle": "الشركة",
+		"copyright": "© {year} GANETHRA IT Services Pvt. Ltd. جميع الحقوق محفوظة.",
+		"madeIn": "صنع في الهند",
+		"servingGlobally": "خدمة عالمية",
+		"links": {
+			"aboutUs": "من نحن",
+			"careers": "الوظائف",
+			"caseStudies": "دراسات الحالة",
+			"blog": "المدونة",
+			"privacy": "سياسة الخصوصية",
+			"terms": "شروط الخدمة"
+		}
+	},
+	"languageSwitcher": {
+		"label": "اختر اللغة",
+		"hint": {
+			"message": "هذه الصفحة متاحة بـ{language}",
+			"switchButton": "التبديل إلى {language}",
+			"dismiss": "تجاهل"
+		}
+	}
+}

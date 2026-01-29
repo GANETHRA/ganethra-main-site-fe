@@ -1,16 +1,10 @@
 "use client";
+import { DotIcon, ShieldIcon } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 import Container from "./container";
-import { ShieldIcon, DotIcon } from "lucide-react";
 
-const SERVICES = [
-	"Custom Software Development",
-	"Cloud Migration & Architecture",
-	"Data Engineering & Analytics",
-	"Cybersecurity Solutions",
-	"Digital Transformation",
-	"DevOps & Infrastructure",
-];
-
+// Service keys for translation (product names don't need translation)
 const SAAS_PRODUCTS = [
 	"POS Analytics Pro",
 	"TaskFlow Pro",
@@ -19,16 +13,37 @@ const SAAS_PRODUCTS = [
 	"KnowledgeHub",
 ];
 
-const COMPANY_LINKS = [
-	"About Us",
-	"Careers",
-	"Case Studies",
-	"Blog",
-	"Privacy Policy",
-	"Terms of Service",
+// Company link keys for translation
+const COMPANY_LINK_KEYS = [
+	"aboutUs",
+	"careers",
+	"caseStudies",
+	"blog",
+	"privacy",
+	"terms",
 ];
 
 export default function Footer() {
+	const locale = useLocale();
+	const t = useTranslations("footer");
+	const tServices = useTranslations("services");
+
+	// Build services list from service translations
+	const SERVICE_KEYS = [
+		"customSoftware",
+		"cloudMigration",
+		"dataEngineering",
+		"cybersecurity",
+		"digitalTransformation",
+		"devops",
+	];
+
+	const services = SERVICE_KEYS.map((key) => tServices(`${key}.title`));
+	const companyLinks = COMPANY_LINK_KEYS.map((key) => ({
+		key,
+		label: t(`links.${key}`),
+	}));
+
 	return (
 		<footer
 			className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-12"
@@ -58,9 +73,7 @@ export default function Footer() {
 							</div>
 
 							<p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-								Transforming businesses through innovative technology solutions
-								and cutting-edge SaaS products since 2016. Leading IT services
-								company in Hyderabad, India.
+								{t("tagline")}
 							</p>
 
 							<div className="flex items-center gap-2">
@@ -69,7 +82,7 @@ export default function Footer() {
 									aria-hidden="true"
 								/>
 								<span className="text-sm text-gray-500 dark:text-gray-400">
-									ISO 27001 Certified
+									{t("isoCertified")}
 								</span>
 							</div>
 						</section>
@@ -77,11 +90,11 @@ export default function Footer() {
 						{/* Services */}
 						<section className="space-y-4">
 							<h3 className="font-bold text-gray-900 dark:text-white">
-								IT Services in Hyderabad
+								{t("itServicesTitle")}
 							</h3>
 							<nav aria-label="IT services navigation">
 								<ul className="space-y-2" role="list">
-									{SERVICES.map((service) => (
+									{services.map((service) => (
 										<li key={service} role="listitem">
 											<a
 												href="#services"
@@ -99,7 +112,7 @@ export default function Footer() {
 						{/* SaaS Products */}
 						<section className="space-y-4">
 							<h3 className="font-bold text-gray-900 dark:text-white">
-								SaaS Solutions
+								{t("saasTitle")}
 							</h3>
 							<nav aria-label="SaaS products navigation">
 								<ul className="space-y-2" role="list">
@@ -121,19 +134,37 @@ export default function Footer() {
 						{/* Company */}
 						<section className="space-y-4">
 							<h3 className="font-bold text-gray-900 dark:text-white">
-								Company
+								{t("companyTitle")}
 							</h3>
 							<nav aria-label="Company information navigation">
 								<ul className="space-y-2" role="list">
-									{COMPANY_LINKS.map((link) => (
-										<li key={link} role="listitem">
-											<a
-												href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-												className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
-												aria-label={`View ${link} information`}
-											>
-												{link}
-											</a>
+									{companyLinks.map(({ key, label }) => (
+										<li key={key} role="listitem">
+											{key === "privacy" ? (
+												<Link
+													href={`/${locale}/privacy`}
+													className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+													aria-label={`View ${label}`}
+												>
+													{label}
+												</Link>
+											) : key === "terms" ? (
+												<Link
+													href={`/${locale}/terms`}
+													className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+													aria-label={`View ${label}`}
+												>
+													{label}
+												</Link>
+											) : (
+												<a
+													href={`#${key.toLowerCase().replace(/\s+/g, "-")}`}
+													className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+													aria-label={`View ${label} information`}
+												>
+													{label}
+												</a>
+											)}
 										</li>
 									))}
 								</ul>
@@ -146,13 +177,12 @@ export default function Footer() {
 				<div className="py-6 border-t border-gray-200 dark:border-gray-800">
 					<div className="flex flex-col sm:flex-row justify-between items-center gap-4">
 						<div className="text-sm text-gray-500 dark:text-gray-400">
-							© {new Date().getFullYear()} GANETHRA IT Services Pvt. Ltd. All
-							rights reserved.
+							{t("copyright", { year: new Date().getFullYear() })}
 						</div>
 						<div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-							<span>Made in India</span>
+							<span>{t("madeIn")}</span>
 							<DotIcon className="w-4 h-4" aria-hidden="true" />
-							<span>Serving Globally</span>
+							<span>{t("servingGlobally")}</span>
 						</div>
 					</div>
 				</div>

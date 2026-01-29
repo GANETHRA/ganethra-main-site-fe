@@ -1,30 +1,31 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import Container from "./container";
 import {
+	AwardIcon,
 	BuildingIcon,
-	StarIcon,
-	UsersIcon,
 	CheckCircleIcon,
 	ClockIcon,
-	AwardIcon,
 	ServerIcon,
+	StarIcon,
 	UserIcon,
+	UsersIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Avatar, AvatarFallback } from "./ui/avatar";
-import { TechnologyItem } from "./ui/technology-item";
+import Container from "./container";
 import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 import { ShineBorder } from "./ui/shine-border";
+import { TechnologyItem } from "./ui/technology-item";
 
-const STATISTICS = [
-	{ value: "500+", label: "Projects Delivered", icon: CheckCircleIcon },
-	{ value: "150+", label: "Happy Clients", icon: UsersIcon },
-	{ value: "50+", label: "Team Members", icon: BuildingIcon },
-	{ value: "99.9%", label: "Uptime SLA", icon: ServerIcon },
-	{ value: "24/7", label: "Support", icon: ClockIcon },
-	{ value: "8+", label: "Years Experience", icon: AwardIcon },
+const STAT_CONFIG = [
+	{ value: "500+", labelKey: "projectsDelivered", icon: CheckCircleIcon },
+	{ value: "150+", labelKey: "happyClients", icon: UsersIcon },
+	{ value: "50+", labelKey: "teamMembers", icon: BuildingIcon },
+	{ value: "99.9%", labelKey: "uptimeSla", icon: ServerIcon },
+	{ value: "24/7", labelKey: "support", icon: ClockIcon },
+	{ value: "8+", labelKey: "yearsExperience", icon: AwardIcon },
 ];
 
 const TECHNOLOGIES = [
@@ -92,6 +93,8 @@ const TECHNOLOGIES = [
 ];
 
 export default function About() {
+	const t = useTranslations("about");
+
 	return (
 		<section className="py-20">
 			<Container>
@@ -102,31 +105,27 @@ export default function About() {
 								<Badge variant="outline" className="relative px-3 py-1">
 									<ShineBorder />
 									<BuildingIcon className="w-4 h-4 mr-1" aria-hidden="true" />
-									About GANETHRA
+									{t("badge")}
 								</Badge>
 							</FadeUpMotion>
 							<FadeUpMotion delay={0.1}>
 								<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-									8+ Years of Excellence in IT Innovation
+									{t("title")}
 								</h2>
 							</FadeUpMotion>
 							<FadeUpMotion delay={0.2}>
 								<p className="text-lg text-muted-foreground leading-relaxed">
-									Founded in 2016, GANETHRA IT Services has evolved from a
-									boutique consultancy to a full-scale technology partner,
-									serving 150+ clients across retail, healthcare, finance, and
-									manufacturing sectors. Based in Hyderabad, India, we deliver
-									enterprise-grade IT solutions globally.
+									{t("description")}
 								</p>
 							</FadeUpMotion>
 						</header>
 
 						<aside aria-label="Company achievements and statistics">
 							<StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4">
-								{STATISTICS.map((stat) => {
+								{STAT_CONFIG.map((stat) => {
 									const IconComponent = stat.icon;
 									return (
-										<StaggerItem key={stat.label}>
+										<StaggerItem key={stat.labelKey}>
 											<Card className="text-center p-4 hover:shadow-md transition-shadow">
 												<CardContent className="p-0">
 													<div className="w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -139,7 +138,7 @@ export default function About() {
 														{stat.value}
 													</div>
 													<div className="text-sm text-muted-foreground">
-														{stat.label}
+														{t(`stats.${stat.labelKey}`)}
 													</div>
 												</CardContent>
 											</Card>
@@ -164,15 +163,13 @@ export default function About() {
 									))}
 								</div>
 								<div>
-									<h3 className="text-sm font-medium">
-										Trusted by 150+ companies worldwide
-									</h3>
+									<h3 className="text-sm font-medium">{t("trustedBy")}</h3>
 									<div className="flex items-center gap-1 text-muted-foreground text-sm">
 										<StarIcon
 											className="w-4 h-4 text-yellow-500 fill-current"
 											aria-hidden="true"
 										/>
-										<span>4.9/5 client satisfaction rating</span>
+										<span>{t("clientRating")}</span>
 									</div>
 								</div>
 							</div>
@@ -183,7 +180,7 @@ export default function About() {
 						<section aria-label="Technology stack and expertise areas">
 							<FadeUpMotion>
 								<h3 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6">
-									Technology Expertise
+									{t("technologyExpertise")}
 								</h3>
 							</FadeUpMotion>
 

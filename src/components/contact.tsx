@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -6,10 +7,8 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
 	Select,
 	SelectContent,
@@ -17,35 +16,37 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import Container from "./container";
+import { Textarea } from "@/components/ui/textarea";
+import { submitForm } from "@/lib/form";
 import {
-	MailIcon,
-	PhoneIcon,
-	MapPinIcon,
+	ArrowRightIcon,
+	CalendarIcon,
 	ClockIcon,
 	DownloadIcon,
-	CalendarIcon,
-	ArrowRightIcon,
-	MessageCircle,
 	Loader2Icon,
+	MailIcon,
+	MapPinIcon,
+	MessageCircle,
+	PhoneIcon,
 } from "lucide-react";
-import { useId, useState } from "react";
-import { Badge } from "./ui/badge";
-import { submitForm } from "@/lib/form";
-import toast from "react-hot-toast";
-import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
-import { ShineBorder } from "./ui/shine-border";
+import { useTranslations } from "next-intl";
 import { usePlausible } from "next-plausible";
+import { useId, useState } from "react";
+import toast from "react-hot-toast";
+import Container from "./container";
+import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
+import { Badge } from "./ui/badge";
+import { ShineBorder } from "./ui/shine-border";
 
-const SERVICES = [
-	"Custom Development",
-	"Cloud Migration & Architecture",
-	"Data Engineering & Analytics",
-	"Cybersecurity Solutions",
-	"Digital Transformation",
-	"DevOps & Infrastructure",
-	"SaaS Products",
-	"IT Consulting",
+const SERVICE_KEYS = [
+	"customDev",
+	"cloudMigration",
+	"dataEngineering",
+	"cybersecurity",
+	"digitalTransformation",
+	"devops",
+	"saasProducts",
+	"itConsulting",
 ];
 
 const BUDGET_RANGES = ["₹50K - ₹1L", "₹1L - ₹5L", "₹5L - ₹10L", "₹10L+"];
@@ -56,14 +57,20 @@ export default function Contact() {
 	const descriptionId = useId();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const plausible = usePlausible();
+	const t = useTranslations("contact");
+
+	// Build translated services list
+	const services = SERVICE_KEYS.map((key) => ({
+		key,
+		label: t(`services.${key}`),
+	}));
 
 	const localBusinessSchema = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"@id": "https://ganethra.com/#localbusiness",
 		name: "Ganethra IT Services Pvt. Ltd.",
-		description:
-			"Leading IT services company in Hyderabad offering custom software development, cloud migration, SaaS solutions, and digital transformation.",
+		description: t("description"),
 		url: "https://ganethra.com",
 		telephone: "+91-80-4152-1234",
 		email: "contact@ganethra.com",
@@ -119,24 +126,18 @@ export default function Contact() {
 				props: { service: data.service },
 			});
 
-			toast.success(
-				"Thank you! Your project request has been submitted successfully. We'll get back to you within 24 hours.",
-				{
-					duration: 6000,
-					position: "top-center",
-				},
-			);
+			toast.success(t("form.successMessage"), {
+				duration: 6000,
+				position: "top-center",
+			});
 
 			e.currentTarget?.reset();
 		} catch (error) {
 			console.error("Form submission error:", error);
-			toast.error(
-				"Sorry, there was an error submitting your request. Please try again or contact us directly.",
-				{
-					duration: 5000,
-					position: "top-center",
-				},
-			);
+			toast.error(t("form.errorMessage"), {
+				duration: 5000,
+				position: "top-center",
+			});
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -157,19 +158,17 @@ export default function Contact() {
 						<Badge variant="outline" className="relative text-sm">
 							<ShineBorder />
 							<MessageCircle className="mr-1" aria-hidden="true" />
-							Get Started
+							{t("badge")}
 						</Badge>
 					</FadeUpMotion>
 					<FadeUpMotion delay={0.1}>
 						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-							Ready to Transform Your Business?
+							{t("title")}
 						</h2>
 					</FadeUpMotion>
 					<FadeUpMotion delay={0.2}>
 						<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-							Schedule a free consultation to discuss your project requirements
-							and get a custom proposal. Leading IT services company in
-							Hyderabad, India.
+							{t("description")}
 						</p>
 					</FadeUpMotion>
 				</header>
@@ -181,11 +180,10 @@ export default function Contact() {
 							<Card className="shadow-lg">
 								<CardHeader>
 									<CardTitle className="text-2xl font-bold">
-										Project Requirements
+										{t("projectRequirements")}
 									</CardTitle>
 									<CardDescription>
-										Tell us about your project and we'll get back to you within
-										24 hours
+										{t("projectRequirementsDesc")}
 									</CardDescription>
 								</CardHeader>
 								<CardContent className="space-y-6">
@@ -197,17 +195,17 @@ export default function Contact() {
 										{/* Row 1: Name and Email */}
 										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 											<Input
-												label="Your Name"
+												label={t("form.name")}
 												name="name"
-												placeholder="Enter your full name"
+												placeholder={t("form.namePlaceholder")}
 												required
 												aria-describedby="name-help"
 											/>
 											<Input
-												label="Email Address"
+												label={t("form.email")}
 												name="email"
 												type="email"
-												placeholder="Enter your email"
+												placeholder={t("form.emailPlaceholder")}
 												required
 												aria-describedby="email-help"
 											/>
@@ -216,16 +214,16 @@ export default function Contact() {
 										{/* Row 2: Company and Service */}
 										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 											<Input
-												label="Company Name"
+												label={t("form.company")}
 												name="company"
-												placeholder="Enter company name"
+												placeholder={t("form.companyPlaceholder")}
 												aria-describedby="company-help"
 											/>
 											<div className="space-y-2">
 												<Label>
-													Select Service{" "}
+													{t("form.service")}{" "}
 													<span className="text-red-500" aria-label="required">
-														*
+														{t("required")}
 													</span>
 												</Label>
 												<Select
@@ -234,12 +232,14 @@ export default function Contact() {
 													aria-describedby="service-help"
 												>
 													<SelectTrigger className="w-full">
-														<SelectValue placeholder="Choose a service" />
+														<SelectValue
+															placeholder={t("form.servicePlaceholder")}
+														/>
 													</SelectTrigger>
 													<SelectContent>
-														{SERVICES.map((service) => (
-															<SelectItem key={service} value={service}>
-																{service}
+														{services.map(({ key, label }) => (
+															<SelectItem key={key} value={label}>
+																{label}
 															</SelectItem>
 														))}
 													</SelectContent>
@@ -250,10 +250,12 @@ export default function Contact() {
 										{/* Row 3: Budget and Timeline */}
 										<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 											<div className="space-y-2">
-												<Label>Budget Range</Label>
+												<Label>{t("form.budget")}</Label>
 												<Select name="budget">
 													<SelectTrigger className="w-full">
-														<SelectValue placeholder="Select budget range" />
+														<SelectValue
+															placeholder={t("form.budgetPlaceholder")}
+														/>
 													</SelectTrigger>
 													<SelectContent>
 														{BUDGET_RANGES.map((range) => (
@@ -265,10 +267,12 @@ export default function Contact() {
 												</Select>
 											</div>
 											<div className="space-y-2">
-												<Label>Timeline</Label>
+												<Label>{t("form.timeline")}</Label>
 												<Select name="timeline">
 													<SelectTrigger className="w-full">
-														<SelectValue placeholder="Select timeline" />
+														<SelectValue
+															placeholder={t("form.timelinePlaceholder")}
+														/>
 													</SelectTrigger>
 													<SelectContent>
 														{TIMELINES.map((timeline) => (
@@ -284,13 +288,13 @@ export default function Contact() {
 										{/* Row 4: Project Description */}
 										<div className="space-y-2">
 											<Label htmlFor={descriptionId}>
-												Project Description{" "}
-												<span className="text-red-500">*</span>
+												{t("form.description")}{" "}
+												<span className="text-red-500">{t("required")}</span>
 											</Label>
 											<Textarea
 												id={descriptionId}
 												name="description"
-												placeholder="Describe your project requirements, goals, and any specific features you need..."
+												placeholder={t("form.descriptionPlaceholder")}
 												className="min-h-[120px]"
 												required
 											/>
@@ -310,7 +314,7 @@ export default function Contact() {
 													aria-hidden="true"
 												/>
 											)}
-											Send Project Request
+											{t("form.submit")}
 											<ArrowRightIcon className="w-4 h-4" aria-hidden="true" />
 										</Button>
 									</form>
@@ -326,7 +330,7 @@ export default function Contact() {
 							<Card className="shadow-lg gap-3">
 								<CardHeader>
 									<CardTitle className="text-lg font-bold">
-										Contact Information
+										{t("contactInfo")}
 									</CardTitle>
 								</CardHeader>
 								<CardContent className="space-y-4">
@@ -350,10 +354,10 @@ export default function Contact() {
 										/>
 										<a
 											className="text-sm hover:underline"
-											href="tel:+918041521234"
-											aria-label="Call us at +91 80 4152 1234"
+											href="tel:+917095959508"
+											aria-label="Call us at +91 70 9595 9508"
 										>
-											+91 80 4152 1234
+											+91 70 9595 9508
 										</a>
 									</div>
 									<div className="flex items-center gap-3">
@@ -362,13 +366,13 @@ export default function Contact() {
 											aria-hidden="true"
 										/>
 										<a
-											href="https://maps.google.com/?q=Koramangala,Hyderabad,India"
+											href="https://maps.google.com/?q=Saroornagar,Hyderabad,India"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="text-sm hover:underline"
-											aria-label="View our office location in Koramangala, Hyderabad on Google Maps"
+											aria-label="View our office location in Saroornagar, Hyderabad on Google Maps"
 										>
-											Koramangala, Hyderabad, India
+											Saroornagar, Hyderabad, India
 										</a>
 									</div>
 									<div className="flex items-center gap-3">
@@ -376,7 +380,7 @@ export default function Contact() {
 											className="w-5 h-5 text-primary"
 											aria-hidden="true"
 										/>
-										<span className="text-sm">Mon-Fri: 9 AM - 6 PM IST</span>
+										<span className="text-sm">{t("businessHours")}</span>
 									</div>
 								</CardContent>
 							</Card>
@@ -386,7 +390,7 @@ export default function Contact() {
 							<Card className="shadow-lg gap-3">
 								<CardHeader>
 									<CardTitle className="text-lg font-bold">
-										Quick Actions
+										{t("quickActions")}
 									</CardTitle>
 								</CardHeader>
 								<CardContent className="space-y-3">
@@ -399,7 +403,7 @@ export default function Contact() {
 										}}
 									>
 										<DownloadIcon className="w-4 h-4 mr-2" aria-hidden="true" />
-										Download Company Profile
+										{t("downloadProfile")}
 									</Button>
 									<Button
 										variant="outline"
@@ -410,7 +414,7 @@ export default function Contact() {
 										}}
 									>
 										<CalendarIcon className="w-4 h-4 mr-2" aria-hidden="true" />
-										Schedule Video Call
+										{t("scheduleCall")}
 									</Button>
 									<Button
 										className="w-full justify-start"
@@ -423,7 +427,7 @@ export default function Contact() {
 											className="w-4 h-4 mr-2"
 											aria-hidden="true"
 										/>
-										Access Product Demos
+										{t("accessDemos")}
 									</Button>
 								</CardContent>
 							</Card>
@@ -434,19 +438,18 @@ export default function Contact() {
 								<CardContent className="p-2 space-y-2">
 									<div className="flex gap-2 items-center">
 										<h4 className="font-semibold text-lg">
-											Average Response Time
+											{t("responseTime")}
 										</h4>
 										<Badge className="rounded-full text-green-800 bg-green-100 text-sm">
 											<div
 												className="size-2 rounded-full bg-green-500 mr-1"
 												aria-hidden="true"
 											/>
-											24 Hours
+											{t("hours")}
 										</Badge>
 									</div>
 									<p className="text-sm text-muted-foreground">
-										We respond to all inquiries within 24 hours during business
-										days
+										{t("responseTimeDesc")}
 									</p>
 								</CardContent>
 							</Card>

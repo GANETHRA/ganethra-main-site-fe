@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "अधिक जानें",
+		"getStarted": "शुरू करें",
+		"contactUs": "संपर्क करें",
+		"readMore": "और पढ़ें",
+		"viewAll": "सभी देखें",
+		"submit": "भेजें",
+		"loading": "लोड हो रहा है...",
+		"error": "कुछ गलत हो गया",
+		"success": "सफलता!",
+		"login": "लॉग इन करें",
+		"startFreeTrial": "मुफ्त ट्रायल शुरू करें",
+		"viewProducts": "उत्पाद देखें",
+		"getFreeQuote": "मुफ्त कोटेशन पाएं",
+		"startingAt": "से शुरू",
+		"perMonth": "प्रति माह"
+	},
+	"nav": {
+		"services": "सेवाएं",
+		"products": "उत्पाद",
+		"about": "हमारे बारे में",
+		"caseStudies": "केस स्टडीज",
+		"contact": "संपर्क",
+		"servicesDescription": "हैदराबाद में आईटी सेवाएं",
+		"productsDescription": "SaaS समाधान",
+		"aboutDescription": "8+ वर्षों की उत्कृष्टता",
+		"caseStudiesDescription": "सफलता की कहानियां",
+		"contactDescription": "मुफ्त परामर्श"
+	},
+	"hero": {
+		"badge": "आईटी सेवाएं और SaaS समाधान",
+		"title": "अपने व्यवसाय को बदलें",
+		"titleHighlight": "आधुनिक तकनीक के साथ",
+		"description": "500+ कंपनियों के लिए स्केलेबल समाधान। हैदराबाद, भारत की अग्रणी आईटी सेवा कंपनी।",
+		"projectsDelivered": "प्रोजेक्ट्स",
+		"happyClients": "खुश ग्राहक",
+		"teamMembers": "टीम सदस्य",
+		"liveActivity": "लाइव एक्टिविटी"
+	},
+	"services": {
+		"badge": "हमारी सेवाएं",
+		"title": "एंटरप्राइज-ग्रेड आईटी समाधान",
+		"description": "व्यापक आईटी समाधान।",
+		"keyFeatures": "मुख्य विशेषताएं:",
+		"customSoftware": {
+			"title": "कस्टम सॉफ्टवेयर",
+			"description": "आधुनिक एप्लिकेशन",
+			"features": {
+				"webApps": "वेब एप्लिकेशन",
+				"apiDev": "API",
+				"microservices": "माइक्रोसर्विसेज",
+				"legacyMod": "मॉडर्नाइजेशन"
+			}
+		},
+		"cloudMigration": {
+			"title": "क्लाउड माइग्रेशन",
+			"description": "AWS/Azure/GCP",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "आर्किटेक्चर",
+				"devopsCicd": "DevOps",
+				"costOpt": "लागत अनुकूलन"
+			}
+		},
+		"dataEngineering": {
+			"title": "डेटा इंजीनियरिंग",
+			"description": "डेटा समाधान",
+			"features": {
+				"dataWarehouse": "वेयरहाउसिंग",
+				"etlPipelines": "ETL",
+				"dashboards": "डैशबोर्ड",
+				"predictive": "एनालिटिक्स"
+			}
+		},
+		"cybersecurity": {
+			"title": "साइबर सुरक्षा",
+			"description": "सुरक्षा समाधान",
+			"features": {
+				"securityAudits": "ऑडिट",
+				"penTesting": "टेस्टिंग",
+				"compliance": "अनुपालन",
+				"incidentResponse": "रिस्पॉन्स"
+			}
+		},
+		"digitalTransformation": {
+			"title": "डिजिटल परिवर्तन",
+			"description": "ऑटोमेशन",
+			"features": {
+				"processAuto": "ऑटोमेशन",
+				"legacyMod": "मॉडर्नाइजेशन",
+				"changeMgmt": "चेंज मैनेजमेंट",
+				"training": "ट्रेनिंग"
+			}
+		},
+		"devops": {
+			"title": "DevOps",
+			"description": "इंफ्रास्ट्रक्चर",
+			"features": {
+				"processAuto": "ऑटोमेशन",
+				"legacyMod": "मॉडर्नाइजेशन",
+				"changeMgmt": "चेंज मैनेजमेंट",
+				"training": "ट्रेनिंग"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "SaaS उत्पाद",
+		"title": "तैयार समाधान",
+		"description": "प्रोडक्शन-रेडी SaaS उत्पाद।",
+		"keyFeatures": "विशेषताएं",
+		"activeUsers": "उपयोगकर्ता",
+		"reliability": "विश्वसनीयता",
+		"integrations": "इंटीग्रेशन",
+		"categories": {
+			"analyticsBI": "एनालिटिक्स & BI",
+			"projectMgmt": "प्रोजेक्ट प्रबंधन",
+			"humanResources": "मानव संसाधन",
+			"salesMarketing": "सेल्स & मार्केटिंग",
+			"documentation": "डॉक्यूमेंटेशन"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "रीयल-टाइम इनसाइट्स, इन्वेंट्री ऑप्टिमाइजेशन और प्रेडिक्टिव एनालिटिक्स के साथ एडवांस्ड रिटेल एनालिटिक्स प्लेटफॉर्म",
+				"features": {
+					"realTimeDashboard": "रीयल-टाइम डैशबोर्ड",
+					"inventoryMgmt": "इन्वेंट्री प्रबंधन",
+					"mobileApp": "मोबाइल ऐप",
+					"predictiveAnalytics": "प्रेडिक्टिव एनालिटिक्स",
+					"multiStore": "मल्टी-स्टोर सपोर्ट",
+					"apiIntegration": "API इंटीग्रेशन"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "Jira की पावर और ClickUp की सिंप्लिसिटी को मिलाकर नेक्स्ट-जेन प्रोजेक्ट मैनेजमेंट",
+				"features": {
+					"agileBoards": "एजाइल बोर्ड",
+					"timeTracking": "टाइम ट्रैकिंग",
+					"teamCollab": "टीम कोलैबोरेशन",
+					"customWorkflows": "कस्टम वर्कफ्लो",
+					"advancedReporting": "एडवांस्ड रिपोर्टिंग",
+					"apiAccess": "API एक्सेस"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "पेरोल, परफॉर्मेंस मैनेजमेंट और एम्प्लॉई पोर्टल के साथ कम्प्लीट HRMS",
+				"features": {
+					"payrollAuto": "पेरोल ऑटोमेशन",
+					"leaveMgmt": "छुट्टी प्रबंधन",
+					"recruitment": "रिक्रूटमेंट",
+					"performanceReviews": "परफॉर्मेंस रिव्यूज",
+					"employeePortal": "एम्प्लॉई पोर्टल",
+					"analytics": "एनालिटिक्स"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "एडवांस्ड लीड स्कोरिंग और सेल्स ऑटोमेशन के साथ AI-पावर्ड CRM",
+				"features": {
+					"leadScoring": "लीड स्कोरिंग",
+					"pipelineMgmt": "पाइपलाइन मैनेजमेंट",
+					"mobileCrm": "मोबाइल CRM",
+					"salesAuto": "सेल्स ऑटोमेशन",
+					"emailIntegration": "ईमेल इंटीग्रेशन",
+					"aiInsights": "AI इनसाइट्स"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "वर्जन कंट्रोल और टीम विकी के साथ कोलैबोरेटिव डॉक्यूमेंटेशन प्लेटफॉर्म",
+				"features": {
+					"versionControl": "वर्जन कंट्रोल",
+					"teamWikis": "टीम विकी",
+					"collaboration": "कोलैबोरेशन",
+					"apiDocs": "API डॉक्स",
+					"searchDiscovery": "सर्च & डिस्कवरी",
+					"exportOptions": "एक्सपोर्ट ऑप्शन्स"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "हमारे बारे में",
+		"title": "8+ वर्षों की उत्कृष्टता",
+		"description": "2016 से 150+ क्लाइंट्स की सेवा।",
+		"iso": "ISO 27001",
+		"technologyExpertise": "तकनीकी विशेषज्ञता",
+		"trustedBy": "150+ कंपनियों द्वारा विश्वसनीय",
+		"clientRating": "4.9/5 रेटिंग",
+		"stats": {
+			"projectsDelivered": "प्रोजेक्ट्स",
+			"happyClients": "ग्राहक",
+			"teamMembers": "टीम",
+			"uptimeSla": "अपटाइम",
+			"support": "सपोर्ट",
+			"yearsExperience": "वर्ष"
+		}
+	},
+	"caseStudies": {
+		"badge": "सफलता",
+		"title": "वास्तविक परिणाम",
+		"description": "हमारी सफलता की कहानियां।",
+		"challenge": "चुनौती",
+		"solution": "समाधान",
+		"result": "परिणाम",
+		"technologiesUsed": "तकनीकें",
+		"cases": {
+			"ecommerce": {
+				"title": "ई-कॉमर्स",
+				"client": "MegaMart",
+				"duration": "6 महीने",
+				"challenge": "10x ट्रैफिक",
+				"solution": "माइक्रोसर्विसेज",
+				"result": "99.9% अपटाइम"
+			},
+			"legacy": {
+				"title": "लीगेसी",
+				"client": "Manufacturing Corp",
+				"duration": "12 महीने",
+				"challenge": "ERP बदलना",
+				"solution": "माइग्रेशन",
+				"result": "50% बचत"
+			}
+		}
+	},
+	"contact": {
+		"badge": "संपर्क",
+		"title": "तैयार हैं?",
+		"description": "मुफ्त परामर्श।",
+		"form": {
+			"name": "नाम",
+			"namePlaceholder": "नाम दर्ज करें",
+			"email": "ईमेल",
+			"emailPlaceholder": "ईमेल दर्ज करें",
+			"company": "कंपनी",
+			"companyPlaceholder": "कंपनी दर्ज करें",
+			"service": "सेवा",
+			"servicePlaceholder": "सेवा चुनें",
+			"budget": "बजट",
+			"budgetPlaceholder": "बजट चुनें",
+			"timeline": "समय",
+			"timelinePlaceholder": "समय चुनें",
+			"description": "विवरण",
+			"descriptionPlaceholder": "विवरण...",
+			"submit": "भेजें",
+			"sending": "भेजा जा रहा है...",
+			"successMessage": "धन्यवाद!",
+			"errorMessage": "त्रुटि"
+		},
+		"projectRequirements": "आवश्यकताएं",
+		"projectRequirementsDesc": "24 घंटे में जवाब",
+		"contactInfo": "संपर्क",
+		"quickActions": "त्वरित",
+		"downloadProfile": "प्रोफाइल",
+		"scheduleCall": "कॉल",
+		"accessDemos": "डेमो",
+		"responseTime": "प्रतिक्रिया",
+		"responseTimeDesc": "24 घंटे में जवाब",
+		"hours": "24 घंटे",
+		"businessHours": "सोम-शुक्र: 9-6",
+		"services": {
+			"customDev": "कस्टम",
+			"cloudMigration": "क्लाउड",
+			"dataEngineering": "डेटा",
+			"cybersecurity": "सुरक्षा",
+			"digitalTransformation": "डिजिटल",
+			"devops": "DevOps",
+			"saasProducts": "SaaS",
+			"itConsulting": "कंसल्टिंग"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "2016 से नवीन समाधान। हैदराबाद, भारत।",
+		"isoCertified": "ISO 27001",
+		"itServicesTitle": "आईटी सेवाएं",
+		"saasTitle": "SaaS",
+		"companyTitle": "कंपनी",
+		"copyright": "© {year} GANETHRA IT Services",
+		"madeIn": "भारत में निर्मित",
+		"servingGlobally": "वैश्विक सेवा",
+		"links": {
+			"aboutUs": "हमारे बारे में",
+			"careers": "करियर",
+			"caseStudies": "केस स्टडीज",
+			"blog": "ब्लॉग",
+			"privacy": "गोपनीयता",
+			"terms": "शर्तें"
+		}
+	},
+	"languageSwitcher": {
+		"label": "भाषा चुनें",
+		"hint": {
+			"message": "{language} में उपलब्ध",
+			"switchButton": "{language} पर स्विच",
+			"dismiss": "बंद"
+		}
+	}
+}
