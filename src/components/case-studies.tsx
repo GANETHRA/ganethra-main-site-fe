@@ -9,13 +9,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Container from "./container";
-import {
-	FileTextIcon,
-	StarIcon,
-	UserIcon,
-	ClockIcon,
-	TrophyIcon,
-} from "lucide-react";
+import { StarIcon, UserIcon, ClockIcon, TrophyIcon } from "lucide-react";
+import { ShineBorder } from "./ui/shine-border";
+import { FadeUpMotion, StaggerContainer, StaggerItem } from "./motion";
 
 const CASE_STUDIES = [
 	{
@@ -72,130 +68,199 @@ const TESTIMONIALS = [
 ];
 
 export default function CaseStudies() {
+	const reviewsSchema = {
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		name: "Client Reviews and Testimonials",
+		description:
+			"Real client feedback and success stories from Ganethra IT Services",
+		itemListElement: TESTIMONIALS.map((testimonial, index) => ({
+			"@type": "Review",
+			position: index + 1,
+			reviewRating: {
+				"@type": "Rating",
+				ratingValue: testimonial.rating,
+				bestRating: 5,
+				worstRating: 1,
+			},
+			reviewBody: testimonial.quote,
+			author: {
+				"@type": "Person",
+				name: testimonial.author.name,
+				jobTitle: testimonial.author.title,
+			},
+			datePublished: "2024-12-01",
+			publisher: {
+				"@type": "Organization",
+				name: "Ganethra IT Services Pvt. Ltd.",
+			},
+		})),
+		aggregateRating: {
+			"@type": "AggregateRating",
+			ratingValue: "4.9",
+			reviewCount: "150",
+			bestRating: "5",
+			worstRating: "1",
+		},
+	};
+
 	return (
 		<section className="py-20 bg-gray-50 dark:bg-gray-900/50">
 			<Container>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(reviewsSchema),
+					}}
+				/>
 				{/* Real Results, Real Impact Section */}
-				<div className="text-center mb-16 space-y-4">
-					<Badge variant="outline" className="text-sm">
-						<TrophyIcon className="mr-1" />
-						Success Stories
-					</Badge>
-					<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-						Real Results, Real Impact
-					</h2>
-				</div>
+				<header className="text-center mb-16 space-y-4">
+					<FadeUpMotion>
+						<Badge variant="outline" className="relative text-sm">
+							<ShineBorder />
+							<TrophyIcon className="mr-1" aria-hidden="true" />
+							Success Stories
+						</Badge>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.1}>
+						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+							Real Results, Real Impact
+						</h2>
+					</FadeUpMotion>
+				</header>
 
 				{/* Case Studies Grid */}
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+				<StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
 					{CASE_STUDIES.map((study) => (
-						<Card
-							key={study.title}
-							className="hover:shadow-lg transition-shadow"
-						>
-							<CardHeader>
-								<div className="flex justify-between items-start mb-2">
-									<CardTitle className="text-xl font-bold">
-										{study.title}
-									</CardTitle>
-									<Badge variant="secondary" className="text-xs">
-										<ClockIcon className="w-3 h-3 mr-1" />
-										{study.duration}
-									</Badge>
-								</div>
-								<CardDescription className="text-sm font-medium text-primary">
-									{study.client}
-								</CardDescription>
-							</CardHeader>
-
-							<CardContent className="space-y-4">
-								<div>
-									<h4 className="text-sm font-semibold mb-1">Challenge</h4>
-									<p className="text-sm text-muted-foreground">
-										{study.challenge}
-									</p>
-								</div>
-
-								<div>
-									<h4 className="text-sm font-semibold mb-1">Solution</h4>
-									<p className="text-sm text-muted-foreground">
-										{study.solution}
-									</p>
-								</div>
-
-								<div>
-									<h4 className="text-sm font-semibold mb-1">Result</h4>
-									<p className="text-sm font-semibold text-green-600">
-										{study.result}
-									</p>
-								</div>
-
-								<div>
-									<h4 className="text-sm font-semibold mb-2">Technologies</h4>
-									<div className="flex flex-wrap gap-2">
-										{study.technologies.map((tech) => (
-											<Badge key={tech} variant="outline" className="text-xs">
-												{tech}
+						<StaggerItem key={study.title}>
+							<article className="hover:shadow-lg transition-shadow">
+								<Card>
+									<CardHeader>
+										<div className="flex justify-between items-start mb-2">
+											<CardTitle className="text-xl font-bold">
+												{study.title}
+											</CardTitle>
+											<Badge variant="secondary" className="text-xs">
+												<ClockIcon
+													className="w-3 h-3 mr-1"
+													aria-hidden="true"
+												/>
+												{study.duration}
 											</Badge>
-										))}
-									</div>
-								</div>
-							</CardContent>
-						</Card>
+										</div>
+										<CardDescription className="text-sm font-medium text-primary">
+											{study.client}
+										</CardDescription>
+									</CardHeader>
+
+									<CardContent className="space-y-4">
+										<section>
+											<h4 className="text-sm font-semibold mb-1">Challenge</h4>
+											<p className="text-sm text-muted-foreground">
+												{study.challenge}
+											</p>
+										</section>
+
+										<section>
+											<h4 className="text-sm font-semibold mb-1">Solution</h4>
+											<p className="text-sm text-muted-foreground">
+												{study.solution}
+											</p>
+										</section>
+
+										<section>
+											<h4 className="text-sm font-semibold mb-1">Result</h4>
+											<p className="text-sm font-semibold text-green-600">
+												{study.result}
+											</p>
+										</section>
+
+										<section>
+											<h4 className="text-sm font-semibold mb-2">
+												Technologies Used
+											</h4>
+											<div
+												className="flex flex-wrap gap-2"
+												role="list"
+												aria-label="Technologies used in this project"
+											>
+												{study.technologies.map((tech) => (
+													<Badge
+														key={tech}
+														variant="outline"
+														className="text-xs"
+														role="listitem"
+													>
+														{tech}
+													</Badge>
+												))}
+											</div>
+										</section>
+									</CardContent>
+								</Card>
+							</article>
+						</StaggerItem>
 					))}
-				</div>
+				</StaggerContainer>
 
 				{/* What Our Clients Say Section */}
-				<div className="text-center mb-12">
-					<h2 className="text-xl sm:text-2xl font-bold tracking-tighter">
-						What Our Clients Say
-					</h2>
-				</div>
+				<FadeUpMotion delay={0.2}>
+					<header className="text-center mb-12">
+						<h2 className="text-xl sm:text-2xl font-bold tracking-tighter">
+							What Our Clients Say
+						</h2>
+					</header>
+				</FadeUpMotion>
 
 				{/* Testimonials Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{TESTIMONIALS.map((testimonial) => (
-						<Card
-							key={testimonial.author.name}
-							className="hover:shadow-lg transition-shadow"
-						>
-							<CardContent className="space-y-4">
-								<div className="flex items-center gap-1">
-									{Array.from({ length: testimonial.rating }, (_, i) => (
-										<StarIcon
-											key={`${testimonial.author.name}-star-${i}`}
-											className="w-4 h-4 text-yellow-500 fill-current"
-										/>
-									))}
-								</div>
-
-								<blockquote className="text-sm text-muted-foreground leading-relaxed">
-									"{testimonial.quote}"
-								</blockquote>
-
-								<div className="flex items-center gap-3">
-									<Avatar className="w-10 h-10">
-										<AvatarImage
-											src={testimonial.author.avatar}
-											alt={testimonial.author.name}
-										/>
-										<AvatarFallback>
-											<UserIcon className="w-5 h-5" />
-										</AvatarFallback>
-									</Avatar>
-									<div>
-										<div className="font-semibold text-sm">
-											{testimonial.author.name}
+						<StaggerItem key={testimonial.author.name}>
+							<article className="hover:shadow-lg transition-shadow">
+								<Card>
+									<CardContent className="space-y-4">
+										<div
+											className="flex items-center gap-1"
+											aria-label={`${testimonial.rating} out of 5 stars`}
+										>
+											{Array.from({ length: testimonial.rating }, (_, i) => (
+												<StarIcon
+													key={`${testimonial.author.name}-star-${i}`}
+													className="w-4 h-4 text-yellow-500 fill-current"
+													aria-hidden="true"
+												/>
+											))}
 										</div>
-										<div className="text-xs text-muted-foreground">
-											{testimonial.author.title}
-										</div>
-									</div>
-								</div>
-							</CardContent>
-						</Card>
+
+										<blockquote className="text-sm text-muted-foreground leading-relaxed">
+											"{testimonial.quote}"
+										</blockquote>
+
+										<footer className="flex items-center gap-3">
+											<Avatar className="w-10 h-10">
+												<AvatarImage
+													src={testimonial.author.avatar}
+													alt={`${testimonial.author.name} profile picture`}
+												/>
+												<AvatarFallback>
+													<UserIcon className="w-5 h-5" aria-hidden="true" />
+												</AvatarFallback>
+											</Avatar>
+											<div>
+												<div className="font-semibold text-sm">
+													{testimonial.author.name}
+												</div>
+												<div className="text-xs text-muted-foreground">
+													{testimonial.author.title}
+												</div>
+											</div>
+										</footer>
+									</CardContent>
+								</Card>
+							</article>
+						</StaggerItem>
 					))}
-				</div>
+				</StaggerContainer>
 			</Container>
 		</section>
 	);

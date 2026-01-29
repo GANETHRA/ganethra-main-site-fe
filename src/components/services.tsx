@@ -1,4 +1,6 @@
 "use client";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -7,21 +9,22 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import Container from "./container";
-import {
-	CodeIcon,
-	CloudIcon,
-	DatabaseIcon,
-	ShieldIcon,
-	BoxIcon,
-	ChevronRight,
-	ServerCogIcon,
-	MonitorUpIcon,
-	CheckIcon,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { numUtils } from "@/lib/utils";
+import {
+	BoxIcon,
+	CheckIcon,
+	ChevronRight,
+	CloudIcon,
+	CodeIcon,
+	DatabaseIcon,
+	MonitorUpIcon,
+	ServerCogIcon,
+	ShieldIcon,
+} from "lucide-react";
+import { usePlausible } from "next-plausible";
+import Container from "./container";
+import { CardStaggerContainer, FadeUpMotion, StaggerItem } from "./motion";
+import { ShineBorder } from "./ui/shine-border";
 
 const SERVICES = [
 	{
@@ -108,77 +111,141 @@ const SERVICES = [
 ];
 
 export default function Services() {
+	const plausible = usePlausible();
+	const servicesSchema = {
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		name: "IT Services Offered by Ganethra",
+		description:
+			"Comprehensive IT solutions designed to accelerate your business growth and digital transformation journey",
+		itemListElement: SERVICES.map((service, index) => ({
+			"@type": "Service",
+			position: index + 1,
+			name: service.title,
+			description: service.description,
+			provider: {
+				"@type": "Organization",
+				name: "Ganethra IT Services Pvt. Ltd.",
+				url: "https://ganethra.com",
+			},
+			areaServed: {
+				"@type": "Country",
+				name: "India",
+			},
+			offers: {
+				"@type": "Offer",
+				price: service.priceINR,
+				priceCurrency: "INR",
+				description: `Starting at ${numUtils.formatToINR(service.priceINR, { precision: 0 })}`,
+			},
+			serviceType: service.features,
+		})),
+	};
+
 	return (
 		<section className="py-20">
 			<Container>
-				<div className="text-center mb-16 space-y-4">
-					<Badge variant="outline" className="text-sm">
-						<BoxIcon className="mr-1" />
-						Our Services
-					</Badge>
-					<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
-						Enterprise-Grade IT Solutions
-					</h2>
-					<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-						Comprehensive IT solutions designed to accelerate your business
-						growth and digital transformation journey.
-					</p>
-				</div>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(servicesSchema),
+					}}
+				/>
+				<header className="text-center mb-16 space-y-4">
+					<FadeUpMotion>
+						<Badge variant="outline" className="relative text-sm">
+							<ShineBorder />
+							<BoxIcon className="mr-1" aria-hidden="true" />
+							Our Services
+						</Badge>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.1}>
+						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter">
+							Enterprise-Grade IT Solutions
+						</h2>
+					</FadeUpMotion>
+					<FadeUpMotion delay={0.2}>
+						<p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+							Comprehensive IT solutions designed to accelerate your business
+							growth and digital transformation journey. Leading IT services
+							company in Hyderabad, India.
+						</p>
+					</FadeUpMotion>
+				</header>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<CardStaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{SERVICES.map((service) => {
 						const IconComponent = service.icon;
 						return (
-							<Card
-								key={service.title}
-								className="group hover:shadow-lg transition-all duration-300 shadow-sm"
-							>
-								<CardHeader>
-									<div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-										<IconComponent className="w-6 h-6 text-primary" />
-									</div>
-									<CardTitle className="text-xl font-semibold">
-										{service.title}
-									</CardTitle>
-									<p className="text-sm font-medium mb-2">
-										Starting at{" "}
-										{numUtils.formatToINR(service.priceINR, { precision: 0 })}
-									</p>
-									<CardDescription className="text-muted-foreground leading-relaxed">
-										{service.description}
-									</CardDescription>
-								</CardHeader>
-								<CardContent>
-									<ul className="space-y-2">
-										{service.features.map((feature) => (
-											<li
-												key={feature}
-												className="flex items-center gap-3 text-sm"
+							<StaggerItem key={service.title}>
+								<article>
+									<Card className="group hover:shadow-lg transition-all duration-300 shadow-sm">
+										<CardHeader>
+											<div className="relative w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:shadow transition-shadow">
+												<ShineBorder shineColor="var(--primary)" />
+												<IconComponent
+													className="w-6 h-6 text-primary"
+													aria-hidden="true"
+												/>
+											</div>
+											<CardTitle className="text-xl font-semibold">
+												{service.title}
+											</CardTitle>
+											<p className="text-sm font-medium mb-2">
+												Starting at{" "}
+												<span className="font-bold text-primary">
+													{numUtils.formatToINR(service.priceINR, {
+														precision: 0,
+													})}
+												</span>
+											</p>
+											<CardDescription className="text-muted-foreground leading-relaxed">
+												{service.description}
+											</CardDescription>
+										</CardHeader>
+										<CardContent>
+											<h3 className="text-sm font-semibold mb-3">
+												Key Features:
+											</h3>
+											<ul className="space-y-2">
+												{service.features.map((feature) => (
+													<li
+														key={feature}
+														className="flex items-center gap-3 text-sm"
+													>
+														<div className="p-1 bg-emerald-100 rounded-full">
+															<CheckIcon
+																className="flex-shrink-0 text-emerald-800"
+																size={12}
+																aria-hidden="true"
+															/>
+														</div>
+														{feature}
+													</li>
+												))}
+											</ul>
+										</CardContent>
+										<CardFooter>
+											<Button
+												variant="outline"
+												className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
+												aria-label={`Get quote for ${service.title}`}
+												onClick={() => {
+													plausible("Service Quote Request", {
+														props: { service: service.title },
+													});
+												}}
 											>
-												<div className="p-1 bg-emerald-100 rounded-full">
-													<CheckIcon
-														className="flex-shrink-0 text-emerald-800"
-														size={12}
-													/>
-												</div>
-												{feature}
-											</li>
-										))}
-									</ul>
-								</CardContent>
-								<CardFooter>
-									<Button
-										variant="outline"
-										className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
-									>
-										Get Quote
-										<ChevronRight />
-									</Button>
-								</CardFooter>
-							</Card>
+												Get Free Quote
+												<ChevronRight aria-hidden="true" />
+											</Button>
+										</CardFooter>
+									</Card>
+								</article>
+							</StaggerItem>
 						);
 					})}
-				</div>
+				</CardStaggerContainer>
 
 				{/* <div className="text-center mt-16">
 					<Button size="lg" className="gap-2">
