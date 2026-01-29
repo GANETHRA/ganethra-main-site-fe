@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Marquee from "@/components/ui/marquee";
 import { ArrowRightIcon, PlayIcon, ZapIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { usePlausible } from "next-plausible";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +15,8 @@ import { ShineBorder } from "./ui/shine-border";
 
 export default function Hero() {
 	const plausible = usePlausible();
+	const t = useTranslations("hero");
+	const tCommon = useTranslations("common");
 
 	return (
 		<Container className="py-20 center">
@@ -28,23 +31,20 @@ export default function Hero() {
 							>
 								<ShineBorder />
 								<ZapIcon className="w-4 h-4 mr-1" aria-hidden="true" />
-								IT Services & SaaS Solutions
+								{t("badge")}
 							</Badge>
 						</div>
 					</FadeUpMotion>
 
 					<FadeUpMotion delay={0.1}>
 						<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
-							Transform Your Business with <AuroraText>Modern Tech</AuroraText>
+							{t("title")} <AuroraText>{t("titleHighlight")}</AuroraText>
 						</h1>
 					</FadeUpMotion>
 
 					<FadeUpMotion delay={0.2}>
 						<p className="text-lg sm:text-xl text-muted-foreground max-w-2xl">
-							From legacy system modernization to cutting-edge SaaS products. We
-							deliver scalable solutions that drive growth and efficiency for
-							500+ companies worldwide. Leading IT services company in
-							Hyderabad, India.
+							{t("description")}
 						</p>
 					</FadeUpMotion>
 
@@ -65,7 +65,7 @@ export default function Hero() {
 									className="gap-4 w-full"
 									aria-label="Start free trial for IT services consultation"
 								>
-									Start Free Trial
+									{tCommon("startFreeTrial")}
 									<ArrowRightIcon className="w-5 h-5" aria-hidden="true" />
 								</Button>
 							</Link>
@@ -85,7 +85,7 @@ export default function Hero() {
 									aria-label="View our SaaS products and solutions"
 								>
 									<PlayIcon className="w-5 h-5" aria-hidden="true" />
-									View Products
+									{tCommon("viewProducts")}
 								</Button>
 							</Link>
 						</div>
@@ -98,7 +98,7 @@ export default function Hero() {
 								<div>
 									<div className="text-3xl sm:text-4xl font-bold">500+</div>
 									<div className="text-sm text-muted-foreground mt-1">
-										Projects Delivered
+										{t("projectsDelivered")}
 									</div>
 								</div>
 							</StaggerItem>
@@ -106,7 +106,7 @@ export default function Hero() {
 								<div>
 									<div className="text-3xl sm:text-4xl font-bold">150+</div>
 									<div className="text-sm text-muted-foreground mt-1">
-										Happy Clients
+										{t("happyClients")}
 									</div>
 								</div>
 							</StaggerItem>
@@ -114,7 +114,7 @@ export default function Hero() {
 								<div>
 									<div className="text-3xl sm:text-4xl font-bold">50+</div>
 									<div className="text-sm text-muted-foreground mt-1">
-										Team Members
+										{t("teamMembers")}
 									</div>
 								</div>
 							</StaggerItem>
@@ -139,7 +139,7 @@ export default function Hero() {
 								className="w-2 h-2 bg-green-500 rounded-full animate-pulse"
 								aria-hidden="true"
 							></div>
-							Live Activity
+							{t("liveActivity")}
 						</h2>
 						<div
 							className="flex-1 overflow-hidden relative"

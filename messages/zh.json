@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "了解更多",
+		"getStarted": "立即开始",
+		"contactUs": "联系我们",
+		"readMore": "阅读更多",
+		"viewAll": "查看全部",
+		"submit": "提交",
+		"loading": "加载中...",
+		"error": "出错了",
+		"success": "成功！",
+		"login": "登录",
+		"startFreeTrial": "免费试用",
+		"viewProducts": "查看产品",
+		"getFreeQuote": "免费报价",
+		"startingAt": "起价",
+		"perMonth": "每月"
+	},
+	"nav": {
+		"services": "服务",
+		"products": "产品",
+		"about": "关于我们",
+		"caseStudies": "案例研究",
+		"contact": "联系方式",
+		"servicesDescription": "海得拉巴IT服务 - 定制软件开发、云迁移、DevOps",
+		"productsDescription": "SaaS解决方案 - POS Analytics、TaskFlow Pro、HRMax Suite、SalesForce+、KnowledgeHub",
+		"aboutDescription": "关于Ganethra IT Services - 8年以上IT创新卓越",
+		"caseStudiesDescription": "成功案例 - 真实结果和客户证言",
+		"contactDescription": "联系我们 - 免费IT咨询和项目报价"
+	},
+	"hero": {
+		"badge": "IT服务与SaaS解决方案",
+		"title": "用现代技术",
+		"titleHighlight": "转型您的业务",
+		"description": "从传统系统现代化到尖端SaaS产品。我们为全球500多家公司提供推动增长和效率的可扩展解决方案。印度海得拉巴领先的IT服务公司。",
+		"projectsDelivered": "交付项目",
+		"happyClients": "满意客户",
+		"teamMembers": "团队成员",
+		"liveActivity": "实时活动"
+	},
+	"services": {
+		"badge": "我们的服务",
+		"title": "企业级IT解决方案",
+		"description": "全面的IT解决方案，旨在加速您的业务增长和数字化转型之旅。印度海得拉巴领先的IT服务公司。",
+		"keyFeatures": "主要特性：",
+		"customSoftware": {
+			"title": "定制软件开发",
+			"description": "使用React、Node.js、Python和.NET等现代技术栈构建的企业级应用程序",
+			"features": {
+				"webApps": "Web应用程序",
+				"apiDev": "API开发",
+				"microservices": "微服务",
+				"legacyMod": "传统系统现代化"
+			}
+		},
+		"cloudMigration": {
+			"title": "云迁移与架构",
+			"description": "无缝迁移到AWS、Azure或GCP，采用针对可扩展性优化的架构",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "云架构",
+				"devopsCicd": "DevOps与CI/CD",
+				"costOpt": "成本优化"
+			}
+		},
+		"dataEngineering": {
+			"title": "数据工程与分析",
+			"description": "通过现代数据仓库和ML管道将原始数据转化为可操作的洞察",
+			"features": {
+				"dataWarehouse": "数据仓库",
+				"etlPipelines": "ETL管道",
+				"dashboards": "仪表板创建",
+				"predictive": "预测分析"
+			}
+		},
+		"cybersecurity": {
+			"title": "网络安全解决方案",
+			"description": "全面的安全审计、渗透测试和合规实施",
+			"features": {
+				"securityAudits": "安全审计",
+				"penTesting": "渗透测试",
+				"compliance": "合规性",
+				"incidentResponse": "事件响应"
+			}
+		},
+		"digitalTransformation": {
+			"title": "数字化转型",
+			"description": "端到端数字化转型，包括流程自动化和工作流优化",
+			"features": {
+				"processAuto": "流程自动化",
+				"legacyMod": "传统系统现代化",
+				"changeMgmt": "变更管理",
+				"training": "培训项目"
+			}
+		},
+		"devops": {
+			"title": "DevOps与基础设施",
+			"description": "CI/CD管道、容器编排和基础设施自动化",
+			"features": {
+				"processAuto": "流程自动化",
+				"legacyMod": "传统系统现代化",
+				"changeMgmt": "变更管理",
+				"training": "培训项目"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "SaaS产品",
+		"title": "即用型解决方案",
+		"description": "受行业领导者信赖的生产就绪SaaS产品。每个解决方案都经过实战检验、可扩展，并提供专门的企业支持。",
+		"keyFeatures": "主要功能",
+		"activeUsers": "活跃用户",
+		"reliability": "可靠性",
+		"integrations": "集成",
+		"categories": {
+			"analyticsBI": "分析与BI",
+			"projectMgmt": "项目管理",
+			"humanResources": "人力资源",
+			"salesMarketing": "销售与营销",
+			"documentation": "文档"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "高级零售分析平台，具有实时洞察、库存优化和预测分析功能",
+				"features": {
+					"realTimeDashboard": "实时仪表板",
+					"inventoryMgmt": "库存管理",
+					"mobileApp": "移动应用",
+					"predictiveAnalytics": "预测分析",
+					"multiStore": "多店铺支持",
+					"apiIntegration": "API集成"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "结合Jira的强大功能和ClickUp的简洁性的下一代项目管理",
+				"features": {
+					"agileBoards": "敏捷看板",
+					"timeTracking": "时间追踪",
+					"teamCollab": "团队协作",
+					"customWorkflows": "自定义工作流",
+					"advancedReporting": "高级报告",
+					"apiAccess": "API访问"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "完整的HRMS，包含薪资、绩效管理和员工自助门户",
+				"features": {
+					"payrollAuto": "薪资自动化",
+					"leaveMgmt": "休假管理",
+					"recruitment": "招聘",
+					"performanceReviews": "绩效评估",
+					"employeePortal": "员工门户",
+					"analytics": "分析"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "AI驱动的CRM，具有高级线索评分和销售自动化功能",
+				"features": {
+					"leadScoring": "线索评分",
+					"pipelineMgmt": "销售管道管理",
+					"mobileCrm": "移动CRM",
+					"salesAuto": "销售自动化",
+					"emailIntegration": "邮件集成",
+					"aiInsights": "AI洞察"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "协作文档平台，具有版本控制和团队Wiki功能",
+				"features": {
+					"versionControl": "版本控制",
+					"teamWikis": "团队Wiki",
+					"collaboration": "协作",
+					"apiDocs": "API文档",
+					"searchDiscovery": "搜索与发现",
+					"exportOptions": "导出选项"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "关于GANETHRA",
+		"title": "8年以上IT创新卓越",
+		"description": "GANETHRA IT Services成立于2016年，已从精品咨询公司发展成为全方位技术合作伙伴，为零售、医疗、金融和制造业的150多个客户提供服务。总部位于印度海得拉巴，我们在全球范围内提供企业级IT解决方案。",
+		"iso": "ISO 27001认证",
+		"technologyExpertise": "技术专长",
+		"trustedBy": "受全球150多家公司信赖",
+		"clientRating": "4.9/5客户满意度",
+		"stats": {
+			"projectsDelivered": "交付项目",
+			"happyClients": "满意客户",
+			"teamMembers": "团队成员",
+			"uptimeSla": "正常运行时间SLA",
+			"support": "支持",
+			"yearsExperience": "年经验"
+		}
+	},
+	"caseStudies": {
+		"badge": "成功案例",
+		"title": "真实结果，真实影响",
+		"description": "了解我们如何通过技术解决方案帮助企业转型运营并实现显著增长。",
+		"challenge": "挑战",
+		"solution": "解决方案",
+		"result": "结果",
+		"technologiesUsed": "使用的技术",
+		"cases": {
+			"ecommerce": {
+				"title": "电商平台扩展",
+				"client": "MegaMart Online",
+				"duration": "6个月",
+				"challenge": "处理节日促销期间10倍的流量",
+				"solution": "具有自动扩展功能的微服务架构",
+				"result": "高峰期99.9%正常运行时间，性能提升300%"
+			},
+			"legacy": {
+				"title": "传统系统现代化",
+				"client": "Manufacturing Corp",
+				"duration": "12个月",
+				"challenge": "替换20年历史的ERP系统",
+				"solution": "零停机分阶段迁移",
+				"result": "成本降低50%，运营速度提升200%"
+			}
+		}
+	},
+	"contact": {
+		"badge": "立即开始",
+		"title": "准备好转型您的业务了吗？",
+		"description": "预约免费咨询，讨论您的项目需求并获取定制方案。印度海得拉巴领先的IT服务公司。",
+		"form": {
+			"name": "您的姓名",
+			"namePlaceholder": "输入您的全名",
+			"email": "电子邮件地址",
+			"emailPlaceholder": "输入您的电子邮件",
+			"company": "公司名称",
+			"companyPlaceholder": "输入公司名称",
+			"service": "选择服务",
+			"servicePlaceholder": "选择一项服务",
+			"budget": "预算范围",
+			"budgetPlaceholder": "选择预算范围",
+			"timeline": "时间表",
+			"timelinePlaceholder": "选择时间表",
+			"description": "项目描述",
+			"descriptionPlaceholder": "描述您的项目需求、目标以及您需要的任何特定功能...",
+			"submit": "发送项目请求",
+			"sending": "发送中...",
+			"successMessage": "谢谢！您的项目请求已成功提交。我们将在24小时内回复您。",
+			"errorMessage": "抱歉，提交您的请求时出错。请重试或直接联系我们。"
+		},
+		"projectRequirements": "项目需求",
+		"projectRequirementsDesc": "告诉我们您的项目，我们将在24小时内回复您",
+		"contactInfo": "联系信息",
+		"quickActions": "快速操作",
+		"downloadProfile": "下载公司简介",
+		"scheduleCall": "预约视频通话",
+		"accessDemos": "访问产品演示",
+		"responseTime": "平均响应时间",
+		"responseTimeDesc": "我们在工作日24小时内回复所有咨询",
+		"hours": "24小时",
+		"businessHours": "周一至周五：上午9点-下午6点 IST",
+		"services": {
+			"customDev": "定制开发",
+			"cloudMigration": "云迁移与架构",
+			"dataEngineering": "数据工程与分析",
+			"cybersecurity": "网络安全解决方案",
+			"digitalTransformation": "数字化转型",
+			"devops": "DevOps与基础设施",
+			"saasProducts": "SaaS产品",
+			"itConsulting": "IT咨询"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "自2016年以来，通过创新技术解决方案和尖端SaaS产品转型企业。印度海得拉巴领先的IT服务公司。",
+		"isoCertified": "ISO 27001认证",
+		"itServicesTitle": "海得拉巴IT服务",
+		"saasTitle": "SaaS解决方案",
+		"companyTitle": "公司",
+		"copyright": "© {year} GANETHRA IT Services Pvt. Ltd. 保留所有权利。",
+		"madeIn": "印度制造",
+		"servingGlobally": "服务全球",
+		"links": {
+			"aboutUs": "关于我们",
+			"careers": "职业机会",
+			"caseStudies": "案例研究",
+			"blog": "博客",
+			"privacy": "隐私政策",
+			"terms": "服务条款"
+		}
+	},
+	"languageSwitcher": {
+		"label": "选择语言",
+		"hint": {
+			"message": "此页面提供{language}版本",
+			"switchButton": "切换到{language}",
+			"dismiss": "关闭"
+		}
+	}
+}

@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "Mehr erfahren",
+		"getStarted": "Loslegen",
+		"contactUs": "Kontakt",
+		"readMore": "Weiterlesen",
+		"viewAll": "Alle anzeigen",
+		"submit": "Absenden",
+		"loading": "Lädt...",
+		"error": "Etwas ist schief gelaufen",
+		"success": "Erfolg!",
+		"login": "Anmelden",
+		"startFreeTrial": "Kostenlos testen",
+		"viewProducts": "Produkte ansehen",
+		"getFreeQuote": "Kostenloses Angebot",
+		"startingAt": "Ab",
+		"perMonth": "pro Monat"
+	},
+	"nav": {
+		"services": "Dienstleistungen",
+		"products": "Produkte",
+		"about": "Über uns",
+		"caseStudies": "Fallstudien",
+		"contact": "Kontakt",
+		"servicesDescription": "IT-Dienstleistungen in Hyderabad - Individuelle Softwareentwicklung, Cloud-Migration, DevOps",
+		"productsDescription": "SaaS-Lösungen - POS Analytics, TaskFlow Pro, HRMax Suite, SalesForce+, KnowledgeHub",
+		"aboutDescription": "Über Ganethra IT Services - 8+ Jahre Exzellenz in IT-Innovation",
+		"caseStudiesDescription": "Erfolgsgeschichten - Echte Ergebnisse und Kundenreferenzen",
+		"contactDescription": "Kontakt - Kostenlose IT-Beratung und Projektangebot"
+	},
+	"hero": {
+		"badge": "IT-Dienstleistungen & SaaS-Lösungen",
+		"title": "Transformieren Sie Ihr Unternehmen mit",
+		"titleHighlight": "moderner Technologie",
+		"description": "Von der Modernisierung von Altsystemen bis zu hochmodernen SaaS-Produkten. Wir liefern skalierbare Lösungen, die Wachstum und Effizienz für über 500 Unternehmen weltweit vorantreiben. Führendes IT-Dienstleistungsunternehmen in Hyderabad, Indien.",
+		"projectsDelivered": "Projekte geliefert",
+		"happyClients": "Zufriedene Kunden",
+		"teamMembers": "Teammitglieder",
+		"liveActivity": "Live-Aktivität"
+	},
+	"services": {
+		"badge": "Unsere Dienstleistungen",
+		"title": "Enterprise-IT-Lösungen",
+		"description": "Umfassende IT-Lösungen, die das Wachstum Ihres Unternehmens und die digitale Transformation beschleunigen. Führendes IT-Dienstleistungsunternehmen in Hyderabad, Indien.",
+		"keyFeatures": "Hauptmerkmale:",
+		"customSoftware": {
+			"title": "Individuelle Softwareentwicklung",
+			"description": "Enterprise-Anwendungen mit modernen Tech-Stacks wie React, Node.js, Python und .NET",
+			"features": {
+				"webApps": "Webanwendungen",
+				"apiDev": "API-Entwicklung",
+				"microservices": "Microservices",
+				"legacyMod": "Legacy-Modernisierung"
+			}
+		},
+		"cloudMigration": {
+			"title": "Cloud-Migration & Architektur",
+			"description": "Nahtlose Migration zu AWS, Azure oder GCP mit optimierten Architekturen für Skalierbarkeit",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "Cloud-Architektur",
+				"devopsCicd": "DevOps & CI/CD",
+				"costOpt": "Kostenoptimierung"
+			}
+		},
+		"dataEngineering": {
+			"title": "Data Engineering & Analytics",
+			"description": "Wandeln Sie Rohdaten in umsetzbare Erkenntnisse mit modernem Data Warehousing und ML-Pipelines",
+			"features": {
+				"dataWarehouse": "Data Warehousing",
+				"etlPipelines": "ETL-Pipelines",
+				"dashboards": "Dashboard-Erstellung",
+				"predictive": "Predictive Analytics"
+			}
+		},
+		"cybersecurity": {
+			"title": "Cybersicherheitslösungen",
+			"description": "Umfassende Sicherheitsaudits, Penetrationstests und Compliance-Implementierungen",
+			"features": {
+				"securityAudits": "Sicherheitsaudits",
+				"penTesting": "Penetrationstests",
+				"compliance": "Compliance",
+				"incidentResponse": "Incident Response"
+			}
+		},
+		"digitalTransformation": {
+			"title": "Digitale Transformation",
+			"description": "End-to-End digitale Transformation mit Prozessautomatisierung und Workflow-Optimierung",
+			"features": {
+				"processAuto": "Prozessautomatisierung",
+				"legacyMod": "Legacy-System-Modernisierung",
+				"changeMgmt": "Change Management",
+				"training": "Schulungsprogramme"
+			}
+		},
+		"devops": {
+			"title": "DevOps & Infrastruktur",
+			"description": "CI/CD-Pipelines, Container-Orchestrierung und Infrastrukturautomatisierung",
+			"features": {
+				"processAuto": "Prozessautomatisierung",
+				"legacyMod": "Legacy-System-Modernisierung",
+				"changeMgmt": "Change Management",
+				"training": "Schulungsprogramme"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "SaaS-Produkte",
+		"title": "Einsatzbereite Lösungen",
+		"description": "Produktionsreife SaaS-Produkte, denen Branchenführer vertrauen. Jede Lösung ist kampferprobt, skalierbar und wird mit dediziertem Enterprise-Support geliefert.",
+		"keyFeatures": "Hauptfunktionen",
+		"activeUsers": "Aktive Nutzer",
+		"reliability": "Zuverlässigkeit",
+		"integrations": "Integrationen",
+		"categories": {
+			"analyticsBI": "Analytics & BI",
+			"projectMgmt": "Projektmanagement",
+			"humanResources": "Personalwesen",
+			"salesMarketing": "Vertrieb & Marketing",
+			"documentation": "Dokumentation"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "Fortgeschrittene Retail-Analytics-Plattform mit Echtzeit-Einblicken, Bestandsoptimierung und prädiktiver Analyse",
+				"features": {
+					"realTimeDashboard": "Echtzeit-Dashboard",
+					"inventoryMgmt": "Bestandsmanagement",
+					"mobileApp": "Mobile App",
+					"predictiveAnalytics": "Predictive Analytics",
+					"multiStore": "Multi-Store-Support",
+					"apiIntegration": "API-Integration"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "Next-Gen Projektmanagement, das die Leistung von Jira mit der Einfachheit von ClickUp kombiniert",
+				"features": {
+					"agileBoards": "Agile Boards",
+					"timeTracking": "Zeiterfassung",
+					"teamCollab": "Team-Zusammenarbeit",
+					"customWorkflows": "Benutzerdefinierte Workflows",
+					"advancedReporting": "Erweiterte Berichte",
+					"apiAccess": "API-Zugang"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "Vollständiges HRMS mit Gehaltsabrechnung, Leistungsmanagement und Mitarbeiterportal",
+				"features": {
+					"payrollAuto": "Gehaltsautomatisierung",
+					"leaveMgmt": "Urlaubsverwaltung",
+					"recruitment": "Rekrutierung",
+					"performanceReviews": "Leistungsbewertungen",
+					"employeePortal": "Mitarbeiterportal",
+					"analytics": "Analytics"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "KI-gestütztes CRM mit erweitertem Lead-Scoring und Vertriebsautomatisierung",
+				"features": {
+					"leadScoring": "Lead-Scoring",
+					"pipelineMgmt": "Pipeline-Management",
+					"mobileCrm": "Mobiles CRM",
+					"salesAuto": "Vertriebsautomatisierung",
+					"emailIntegration": "E-Mail-Integration",
+					"aiInsights": "KI-Einblicke"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "Kollaborative Dokumentationsplattform mit Versionskontrolle und Team-Wikis",
+				"features": {
+					"versionControl": "Versionskontrolle",
+					"teamWikis": "Team-Wikis",
+					"collaboration": "Zusammenarbeit",
+					"apiDocs": "API-Dokumentation",
+					"searchDiscovery": "Suche & Entdeckung",
+					"exportOptions": "Export-Optionen"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "Über GANETHRA",
+		"title": "8+ Jahre Exzellenz in IT-Innovation",
+		"description": "Gegründet 2016, hat sich GANETHRA IT Services von einer Boutique-Beratung zu einem vollwertigen Technologiepartner entwickelt, der über 150 Kunden in den Bereichen Einzelhandel, Gesundheitswesen, Finanzen und Fertigung betreut. Mit Sitz in Hyderabad, Indien, liefern wir Enterprise-IT-Lösungen weltweit.",
+		"iso": "ISO 27001 zertifiziert",
+		"technologyExpertise": "Technologie-Expertise",
+		"trustedBy": "Vertraut von über 150 Unternehmen weltweit",
+		"clientRating": "4.9/5 Kundenzufriedenheit",
+		"stats": {
+			"projectsDelivered": "Projekte geliefert",
+			"happyClients": "Zufriedene Kunden",
+			"teamMembers": "Teammitglieder",
+			"uptimeSla": "Uptime-SLA",
+			"support": "Support",
+			"yearsExperience": "Jahre Erfahrung"
+		}
+	},
+	"caseStudies": {
+		"badge": "Erfolgsgeschichten",
+		"title": "Echte Ergebnisse, echter Einfluss",
+		"description": "Erfahren Sie, wie wir Unternehmen geholfen haben, ihre Abläufe zu transformieren und bemerkenswertes Wachstum durch unsere Technologielösungen zu erzielen.",
+		"challenge": "Herausforderung",
+		"solution": "Lösung",
+		"result": "Ergebnis",
+		"technologiesUsed": "Verwendete Technologien",
+		"cases": {
+			"ecommerce": {
+				"title": "E-Commerce-Plattform-Skalierung",
+				"client": "MegaMart Online",
+				"duration": "6 Monate",
+				"challenge": "10-fachen Traffic während Festivalverkäufen bewältigen",
+				"solution": "Microservices-Architektur mit Auto-Skalierung",
+				"result": "99,9% Uptime bei Spitzenverkehr, 300% Leistungsverbesserung"
+			},
+			"legacy": {
+				"title": "Legacy-System-Modernisierung",
+				"client": "Manufacturing Corp",
+				"duration": "12 Monate",
+				"challenge": "20 Jahre altes ERP-System ersetzen",
+				"solution": "Phasenweise Migration ohne Ausfallzeit",
+				"result": "50% Kostenreduktion, 200% schnellere Abläufe"
+			}
+		}
+	},
+	"contact": {
+		"badge": "Loslegen",
+		"title": "Bereit, Ihr Unternehmen zu transformieren?",
+		"description": "Vereinbaren Sie eine kostenlose Beratung, um Ihre Projektanforderungen zu besprechen und ein individuelles Angebot zu erhalten. Führendes IT-Dienstleistungsunternehmen in Hyderabad, Indien.",
+		"form": {
+			"name": "Ihr Name",
+			"namePlaceholder": "Geben Sie Ihren vollständigen Namen ein",
+			"email": "E-Mail-Adresse",
+			"emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+			"company": "Firmenname",
+			"companyPlaceholder": "Geben Sie den Firmennamen ein",
+			"service": "Service auswählen",
+			"servicePlaceholder": "Wählen Sie einen Service",
+			"budget": "Budgetrahmen",
+			"budgetPlaceholder": "Budgetrahmen auswählen",
+			"timeline": "Zeitplan",
+			"timelinePlaceholder": "Zeitplan auswählen",
+			"description": "Projektbeschreibung",
+			"descriptionPlaceholder": "Beschreiben Sie Ihre Projektanforderungen, Ziele und spezifische Funktionen, die Sie benötigen...",
+			"submit": "Projektanfrage senden",
+			"sending": "Wird gesendet...",
+			"successMessage": "Vielen Dank! Ihre Projektanfrage wurde erfolgreich eingereicht. Wir melden uns innerhalb von 24 Stunden.",
+			"errorMessage": "Entschuldigung, beim Absenden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+		},
+		"projectRequirements": "Projektanforderungen",
+		"projectRequirementsDesc": "Erzählen Sie uns von Ihrem Projekt und wir melden uns innerhalb von 24 Stunden",
+		"contactInfo": "Kontaktinformationen",
+		"quickActions": "Schnellaktionen",
+		"downloadProfile": "Firmenprofil herunterladen",
+		"scheduleCall": "Videoanruf planen",
+		"accessDemos": "Produktdemos zugreifen",
+		"responseTime": "Durchschnittliche Antwortzeit",
+		"responseTimeDesc": "Wir beantworten alle Anfragen innerhalb von 24 Stunden an Werktagen",
+		"hours": "24 Stunden",
+		"businessHours": "Mo-Fr: 9-18 Uhr IST",
+		"services": {
+			"customDev": "Individuelle Entwicklung",
+			"cloudMigration": "Cloud-Migration & Architektur",
+			"dataEngineering": "Data Engineering & Analytics",
+			"cybersecurity": "Cybersicherheitslösungen",
+			"digitalTransformation": "Digitale Transformation",
+			"devops": "DevOps & Infrastruktur",
+			"saasProducts": "SaaS-Produkte",
+			"itConsulting": "IT-Beratung"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "Transformation von Unternehmen durch innovative Technologielösungen und hochmoderne SaaS-Produkte seit 2016. Führendes IT-Dienstleistungsunternehmen in Hyderabad, Indien.",
+		"isoCertified": "ISO 27001 zertifiziert",
+		"itServicesTitle": "IT-Dienstleistungen in Hyderabad",
+		"saasTitle": "SaaS-Lösungen",
+		"companyTitle": "Unternehmen",
+		"copyright": "© {year} GANETHRA IT Services Pvt. Ltd. Alle Rechte vorbehalten.",
+		"madeIn": "Made in India",
+		"servingGlobally": "Weltweit tätig",
+		"links": {
+			"aboutUs": "Über uns",
+			"careers": "Karriere",
+			"caseStudies": "Fallstudien",
+			"blog": "Blog",
+			"privacy": "Datenschutz",
+			"terms": "Nutzungsbedingungen"
+		}
+	},
+	"languageSwitcher": {
+		"label": "Sprache auswählen",
+		"hint": {
+			"message": "Diese Seite ist auf {language} verfügbar",
+			"switchButton": "Zu {language} wechseln",
+			"dismiss": "Schließen"
+		}
+	}
+}

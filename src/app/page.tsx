@@ -1,114 +1,41 @@
-/* eslint-disable react/no-static-element-interactions */
-import Hero from "@/components/hero";
-import Services from "@/components/services";
-import Solutions from "@/components/solutions";
-import About from "@/components/about";
-import CaseStudies from "@/components/case-studies";
-import Contact from "@/components/contact";
-import Footer from "@/components/footer";
-import { Bubble } from "@typebot.io/nextjs";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-	title:
-		"Ganethra IT Services - Custom Software Development & SaaS Solutions | Hyderabad",
-	description:
-		"Leading IT services company in Hyderabad offering custom software development, cloud migration, SaaS solutions, and digital transformation. 500+ projects delivered, 150+ happy clients. Get free consultation today!",
-	keywords: [
-		"IT services Hyderabad",
-		"custom software development India",
-		"cloud migration services",
-		"SaaS solutions for business",
-		"digital transformation consulting",
-		"POS analytics software",
-		"project management tool",
-		"HR management system",
-		"data engineering services",
-		"DevOps consulting",
-		"best IT company in Hyderabad",
-		"legacy system modernization India",
-		"enterprise software development",
-		"retail analytics platform",
-	],
-	openGraph: {
-		title:
-			"Ganethra IT Services - Custom Software Development & SaaS Solutions | Hyderabad",
-		description:
-			"Leading IT services company in Hyderabad offering custom software development, cloud migration, SaaS solutions, and digital transformation. 500+ projects delivered, 150+ happy clients.",
-		url: "https://ganethra.com",
-		type: "website",
-		images: [
-			{
-				url: "/assets/hero2.svg",
-				width: 1200,
-				height: 630,
-				alt: "Ganethra IT Services - Modern office workspace showing team collaboration on digital transformation projects",
-			},
-		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		title:
-			"Ganethra IT Services - Custom Software Development & SaaS Solutions | Hyderabad",
-		description:
-			"Leading IT services company in Hyderabad offering custom software development, cloud migration, SaaS solutions, and digital transformation. 500+ projects delivered, 150+ happy clients.",
-		images: ["/assets/hero2.svg"],
-	},
-	alternates: {
-		canonical: "https://ganethra.com",
-	},
-};
+import { getStoredLocale } from "@/components/ui/language-switcher";
+import { defaultLocale, isValidLocale } from "@/i18n/config";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useEffect } from "react";
 
-export default function Home() {
+function RedirectHandler() {
+	const router = useRouter();
+	const searchParams = useSearchParams();
+
+	useEffect(() => {
+		const langParam = searchParams.get("lang");
+
+		// Check if ?lang= query param exists and is valid
+		if (langParam && isValidLocale(langParam)) {
+			router.replace(`/${langParam}`);
+			return;
+		}
+
+		// Check cookie/localStorage for preferred locale (shared across subdomains)
+		const preferredLocale = getStoredLocale();
+		if (preferredLocale) {
+			router.replace(`/${preferredLocale}`);
+			return;
+		}
+
+		// Default: redirect to English
+		router.replace(`/${defaultLocale}`);
+	}, [router, searchParams]);
+
+	return null;
+}
+
+export default function RootPage() {
 	return (
-		<>
-			<main>
-				<section
-					id="hero"
-					aria-label="Hero section - Transform Your Business with Modern Tech"
-				>
-					<Hero />
-				</section>
-				<section
-					id="services"
-					aria-label="Our Services - Enterprise-Grade IT Solutions"
-				>
-					<Services />
-				</section>
-				<section
-					id="solutions"
-					aria-label="SaaS Products - Ready-to-Deploy Solutions"
-				>
-					<Solutions />
-				</section>
-				<section
-					id="about"
-					aria-label="About Ganethra - 8+ Years of Excellence in IT Innovation"
-				>
-					<About />
-				</section>
-				<section
-					id="case-studies"
-					aria-label="Success Stories - Real Results, Real Impact"
-				>
-					<CaseStudies />
-				</section>
-				<section
-					id="contact"
-					aria-label="Contact Us - Ready to Transform Your Business"
-				>
-					<Contact />
-				</section>
-			</main>
-			<Footer />
-			{/* <Chatbot /> */}
-			<Bubble
-				typebot="ganethra-assistant-5d5b6w1"
-				apiHost={process.env.NEXT_PUBLIC_TYPEBOT_HOST}
-				theme={{
-					button: { backgroundColor: "var(--primary)" },
-				}}
-			/>
-		</>
+		<Suspense fallback={null}>
+			<RedirectHandler />
+		</Suspense>
 	);
 }

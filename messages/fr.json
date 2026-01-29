@@ -1,0 +1,302 @@
+{
+	"common": {
+		"learnMore": "En savoir plus",
+		"getStarted": "Commencer",
+		"contactUs": "Nous contacter",
+		"readMore": "Lire la suite",
+		"viewAll": "Voir tout",
+		"submit": "Soumettre",
+		"loading": "Chargement...",
+		"error": "Une erreur s'est produite",
+		"success": "Succès !",
+		"login": "Connexion",
+		"startFreeTrial": "Essai gratuit",
+		"viewProducts": "Voir les produits",
+		"getFreeQuote": "Devis gratuit",
+		"startingAt": "À partir de",
+		"perMonth": "par mois"
+	},
+	"nav": {
+		"services": "Services",
+		"products": "Produits",
+		"about": "À propos",
+		"caseStudies": "Études de cas",
+		"contact": "Contact",
+		"servicesDescription": "Services TI à Hyderabad - Développement logiciel personnalisé, Migration cloud, DevOps",
+		"productsDescription": "Solutions SaaS - POS Analytics, TaskFlow Pro, HRMax Suite, SalesForce+, KnowledgeHub",
+		"aboutDescription": "À propos de Ganethra IT Services - Plus de 8 ans d'excellence en innovation TI",
+		"caseStudiesDescription": "Histoires de succès - Résultats réels et témoignages clients",
+		"contactDescription": "Nous contacter - Consultation TI gratuite et devis de projet"
+	},
+	"hero": {
+		"badge": "Services TI et Solutions SaaS",
+		"title": "Transformez votre entreprise avec",
+		"titleHighlight": "la technologie moderne",
+		"description": "De la modernisation des systèmes hérités aux produits SaaS de pointe. Nous fournissons des solutions évolutives qui stimulent la croissance et l'efficacité pour plus de 500 entreprises dans le monde. Entreprise leader en services TI à Hyderabad, Inde.",
+		"projectsDelivered": "Projets livrés",
+		"happyClients": "Clients satisfaits",
+		"teamMembers": "Membres de l'équipe",
+		"liveActivity": "Activité en direct"
+	},
+	"services": {
+		"badge": "Nos services",
+		"title": "Solutions TI de niveau entreprise",
+		"description": "Solutions TI complètes conçues pour accélérer la croissance de votre entreprise et votre parcours de transformation numérique. Entreprise leader en services TI à Hyderabad, Inde.",
+		"keyFeatures": "Caractéristiques clés :",
+		"customSoftware": {
+			"title": "Développement logiciel personnalisé",
+			"description": "Applications de niveau entreprise construites avec des stacks technologiques modernes incluant React, Node.js, Python et .NET",
+			"features": {
+				"webApps": "Applications web",
+				"apiDev": "Développement API",
+				"microservices": "Microservices",
+				"legacyMod": "Modernisation des systèmes"
+			}
+		},
+		"cloudMigration": {
+			"title": "Migration et architecture cloud",
+			"description": "Migration transparente vers AWS, Azure ou GCP avec des architectures optimisées pour l'évolutivité",
+			"features": {
+				"awsAzureGcp": "AWS/Azure/GCP",
+				"cloudArch": "Architecture cloud",
+				"devopsCicd": "DevOps et CI/CD",
+				"costOpt": "Optimisation des coûts"
+			}
+		},
+		"dataEngineering": {
+			"title": "Ingénierie des données et analytique",
+			"description": "Transformez les données brutes en insights actionnables avec un entreposage de données moderne et des pipelines ML",
+			"features": {
+				"dataWarehouse": "Entreposage de données",
+				"etlPipelines": "Pipelines ETL",
+				"dashboards": "Création de tableaux de bord",
+				"predictive": "Analytique prédictive"
+			}
+		},
+		"cybersecurity": {
+			"title": "Solutions de cybersécurité",
+			"description": "Audits de sécurité complets, tests de pénétration et implémentations de conformité",
+			"features": {
+				"securityAudits": "Audits de sécurité",
+				"penTesting": "Tests de pénétration",
+				"compliance": "Conformité",
+				"incidentResponse": "Réponse aux incidents"
+			}
+		},
+		"digitalTransformation": {
+			"title": "Transformation numérique",
+			"description": "Transformation numérique de bout en bout avec automatisation des processus et optimisation des workflows",
+			"features": {
+				"processAuto": "Automatisation des processus",
+				"legacyMod": "Modernisation des systèmes",
+				"changeMgmt": "Gestion du changement",
+				"training": "Programmes de formation"
+			}
+		},
+		"devops": {
+			"title": "DevOps et infrastructure",
+			"description": "Pipelines CI/CD, orchestration de conteneurs et automatisation de l'infrastructure",
+			"features": {
+				"processAuto": "Automatisation des processus",
+				"legacyMod": "Modernisation des systèmes",
+				"changeMgmt": "Gestion du changement",
+				"training": "Programmes de formation"
+			}
+		}
+	},
+	"solutions": {
+		"badge": "Produits SaaS",
+		"title": "Solutions prêtes à déployer",
+		"description": "Produits SaaS prêts pour la production, approuvés par les leaders de l'industrie. Chaque solution est éprouvée, évolutive et accompagnée d'un support entreprise dédié.",
+		"keyFeatures": "Fonctionnalités clés",
+		"activeUsers": "Utilisateurs actifs",
+		"reliability": "Fiabilité",
+		"integrations": "Intégrations",
+		"categories": {
+			"analyticsBI": "Analytique & BI",
+			"projectMgmt": "Gestion de projet",
+			"humanResources": "Ressources humaines",
+			"salesMarketing": "Ventes & Marketing",
+			"documentation": "Documentation"
+		},
+		"products": {
+			"posAnalytics": {
+				"title": "POS Analytics Pro",
+				"description": "Plateforme d'analyse retail avancée avec insights en temps réel, optimisation des stocks et analyses prédictives",
+				"features": {
+					"realTimeDashboard": "Tableau de bord temps réel",
+					"inventoryMgmt": "Gestion des stocks",
+					"mobileApp": "Application mobile",
+					"predictiveAnalytics": "Analyses prédictives",
+					"multiStore": "Multi-magasins",
+					"apiIntegration": "Intégration API"
+				}
+			},
+			"taskFlow": {
+				"title": "TaskFlow Pro",
+				"description": "Gestion de projet nouvelle génération combinant la puissance de Jira et la simplicité de ClickUp",
+				"features": {
+					"agileBoards": "Tableaux Agile",
+					"timeTracking": "Suivi du temps",
+					"teamCollab": "Collaboration d'équipe",
+					"customWorkflows": "Workflows personnalisés",
+					"advancedReporting": "Rapports avancés",
+					"apiAccess": "Accès API"
+				}
+			},
+			"hrMax": {
+				"title": "HRMax Suite",
+				"description": "Solution HRMS complète avec paie, gestion des performances et portail employé",
+				"features": {
+					"payrollAuto": "Automatisation paie",
+					"leaveMgmt": "Gestion des congés",
+					"recruitment": "Recrutement",
+					"performanceReviews": "Évaluations",
+					"employeePortal": "Portail employé",
+					"analytics": "Analytique"
+				}
+			},
+			"salesForce": {
+				"title": "SalesForce+",
+				"description": "CRM alimenté par l'IA avec scoring de leads avancé et automatisation des ventes",
+				"features": {
+					"leadScoring": "Scoring de leads",
+					"pipelineMgmt": "Gestion pipeline",
+					"mobileCrm": "CRM mobile",
+					"salesAuto": "Automatisation ventes",
+					"emailIntegration": "Intégration email",
+					"aiInsights": "Insights IA"
+				}
+			},
+			"knowledgeHub": {
+				"title": "KnowledgeHub",
+				"description": "Plateforme de documentation collaborative avec contrôle de version et wikis d'équipe",
+				"features": {
+					"versionControl": "Contrôle de version",
+					"teamWikis": "Wikis d'équipe",
+					"collaboration": "Collaboration",
+					"apiDocs": "Documentation API",
+					"searchDiscovery": "Recherche & Découverte",
+					"exportOptions": "Options d'export"
+				}
+			}
+		}
+	},
+	"about": {
+		"badge": "À propos de GANETHRA",
+		"title": "Plus de 8 ans d'excellence en innovation TI",
+		"description": "Fondée en 2016, GANETHRA IT Services a évolué d'un cabinet de conseil boutique à un partenaire technologique à grande échelle, servant plus de 150 clients dans les secteurs du commerce de détail, de la santé, de la finance et de la fabrication. Basée à Hyderabad, Inde, nous fournissons des solutions TI de niveau entreprise à l'échelle mondiale.",
+		"iso": "Certifié ISO 27001",
+		"technologyExpertise": "Expertise technologique",
+		"trustedBy": "Approuvé par plus de 150 entreprises dans le monde",
+		"clientRating": "4.9/5 de satisfaction client",
+		"stats": {
+			"projectsDelivered": "Projets livrés",
+			"happyClients": "Clients satisfaits",
+			"teamMembers": "Membres de l'équipe",
+			"uptimeSla": "SLA de disponibilité",
+			"support": "Support",
+			"yearsExperience": "Années d'expérience"
+		}
+	},
+	"caseStudies": {
+		"badge": "Histoires de succès",
+		"title": "Résultats réels, impact réel",
+		"description": "Découvrez comment nous avons aidé des entreprises à transformer leurs opérations et à atteindre une croissance remarquable grâce à nos solutions technologiques.",
+		"challenge": "Défi",
+		"solution": "Solution",
+		"result": "Résultat",
+		"technologiesUsed": "Technologies utilisées",
+		"cases": {
+			"ecommerce": {
+				"title": "Mise à l'échelle de plateforme e-commerce",
+				"client": "MegaMart Online",
+				"duration": "6 mois",
+				"challenge": "Gérer 10x le trafic pendant les ventes de festivals",
+				"solution": "Architecture microservices avec mise à l'échelle automatique",
+				"result": "99,9% de disponibilité pendant les pics de trafic, 300% d'amélioration des performances"
+			},
+			"legacy": {
+				"title": "Modernisation du système hérité",
+				"client": "Manufacturing Corp",
+				"duration": "12 mois",
+				"challenge": "Remplacer un système ERP de 20 ans",
+				"solution": "Migration progressive sans temps d'arrêt",
+				"result": "Réduction des coûts de 50%, opérations 200% plus rapides"
+			}
+		}
+	},
+	"contact": {
+		"badge": "Commencer",
+		"title": "Prêt à transformer votre entreprise ?",
+		"description": "Planifiez une consultation gratuite pour discuter de vos besoins de projet et obtenir une proposition personnalisée. Entreprise leader en services TI à Hyderabad, Inde.",
+		"form": {
+			"name": "Votre nom",
+			"namePlaceholder": "Entrez votre nom complet",
+			"email": "Adresse e-mail",
+			"emailPlaceholder": "Entrez votre e-mail",
+			"company": "Nom de l'entreprise",
+			"companyPlaceholder": "Entrez le nom de l'entreprise",
+			"service": "Sélectionner un service",
+			"servicePlaceholder": "Choisissez un service",
+			"budget": "Fourchette de budget",
+			"budgetPlaceholder": "Sélectionnez la fourchette de budget",
+			"timeline": "Calendrier",
+			"timelinePlaceholder": "Sélectionnez le calendrier",
+			"description": "Description du projet",
+			"descriptionPlaceholder": "Décrivez les exigences de votre projet, vos objectifs et les fonctionnalités spécifiques dont vous avez besoin...",
+			"submit": "Envoyer la demande de projet",
+			"sending": "Envoi en cours...",
+			"successMessage": "Merci ! Votre demande de projet a été soumise avec succès. Nous vous répondrons dans les 24 heures.",
+			"errorMessage": "Désolé, une erreur s'est produite lors de la soumission de votre demande. Veuillez réessayer ou nous contacter directement."
+		},
+		"projectRequirements": "Exigences du projet",
+		"projectRequirementsDesc": "Parlez-nous de votre projet et nous vous répondrons dans les 24 heures",
+		"contactInfo": "Informations de contact",
+		"quickActions": "Actions rapides",
+		"downloadProfile": "Télécharger le profil de l'entreprise",
+		"scheduleCall": "Planifier un appel vidéo",
+		"accessDemos": "Accéder aux démos de produits",
+		"responseTime": "Temps de réponse moyen",
+		"responseTimeDesc": "Nous répondons à toutes les demandes dans les 24 heures pendant les jours ouvrables",
+		"hours": "24 Heures",
+		"businessHours": "Lun-Ven : 9h - 18h IST",
+		"services": {
+			"customDev": "Développement personnalisé",
+			"cloudMigration": "Migration et architecture cloud",
+			"dataEngineering": "Ingénierie des données et analytique",
+			"cybersecurity": "Solutions de cybersécurité",
+			"digitalTransformation": "Transformation numérique",
+			"devops": "DevOps et infrastructure",
+			"saasProducts": "Produits SaaS",
+			"itConsulting": "Conseil TI"
+		},
+		"required": "*"
+	},
+	"footer": {
+		"tagline": "Transformer les entreprises grâce à des solutions technologiques innovantes et des produits SaaS de pointe depuis 2016. Entreprise leader en services TI à Hyderabad, Inde.",
+		"isoCertified": "Certifié ISO 27001",
+		"itServicesTitle": "Services TI à Hyderabad",
+		"saasTitle": "Solutions SaaS",
+		"companyTitle": "Entreprise",
+		"copyright": "© {year} GANETHRA IT Services Pvt. Ltd. Tous droits réservés.",
+		"madeIn": "Fabriqué en Inde",
+		"servingGlobally": "Service mondial",
+		"links": {
+			"aboutUs": "À propos",
+			"careers": "Carrières",
+			"caseStudies": "Études de cas",
+			"blog": "Blog",
+			"privacy": "Politique de confidentialité",
+			"terms": "Conditions d'utilisation"
+		}
+	},
+	"languageSwitcher": {
+		"label": "Sélectionner la langue",
+		"hint": {
+			"message": "Cette page est disponible en {language}",
+			"switchButton": "Passer à {language}",
+			"dismiss": "Ignorer"
+		}
+	}
+}
