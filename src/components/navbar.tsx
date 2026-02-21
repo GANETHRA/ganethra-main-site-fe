@@ -240,7 +240,7 @@ export default function Navbar() {
 
 							<div className="mt-6 lg:mt-0 flex items-center gap-2">
 								<LanguageSwitcher />
-								<Link
+								{/* <Link
 									href="https://iam.ganethra.com"
 									aria-label="Login to Ganethra IT Services portal"
 									title="Access client portal and project management tools"
@@ -258,7 +258,7 @@ export default function Navbar() {
 											aria-hidden="true"
 										/>
 									</Button>
-								</Link>
+								</Link> */}
 							</div>
 						</div>
 					</div>
