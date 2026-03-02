@@ -76,7 +76,7 @@ export default function Footer() {
 								{t("tagline")}
 							</p>
 
-							<div className="flex items-center gap-2">
+							{/* <div className="flex items-center gap-2">
 								<ShieldIcon
 									className="w-4 h-4 text-green-600"
 									aria-hidden="true"
@@ -84,7 +84,7 @@ export default function Footer() {
 								<span className="text-sm text-gray-500 dark:text-gray-400">
 									{t("isoCertified")}
 								</span>
-							</div>
+							</div> */}
 						</section>
 
 						{/* Services */}

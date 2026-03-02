@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePlausible } from "next-plausible";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Container from "./container";
@@ -152,15 +153,13 @@ export default function Navbar() {
 								className="flex items-center gap-2"
 								title="Ganethra IT Services - Custom Software Development & SaaS Solutions"
 							>
-								{/* <Logo className="rounded-md w-8 fill-[var(--logo-bg)]" /> */}
-								<div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-									<span
-										className="text-white font-black text-2xl"
-										aria-hidden="true"
-									>
-										G
-									</span>
-								</div>
+								<Image
+									src="/assets/logo.svg"
+									alt="Ganethra IT Services Logo"
+									width={40}
+									height={40}
+									className="rounded-md"
+								/>
 								<div className="flex flex-col ">
 									<span className="text-xl font-bold tracking-tighter">
 										Ganethra IT
